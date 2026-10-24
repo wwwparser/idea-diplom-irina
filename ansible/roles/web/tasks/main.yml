@@ -1,0 +1,24 @@
+---
+- name: Install nginx
+  ansible.builtin.apt:
+    name: nginx
+    state: present
+
+- name: Deploy identical static files
+  ansible.builtin.copy:
+    src: "{{ playbook_dir }}/../site/"
+    dest: /var/www/html/
+    mode: '0644'
+
+- name: Configure virtual host with syntax validation
+  ansible.builtin.template:
+    src: nginx.conf.j2
+    dest: /etc/nginx/sites-available/default
+    mode: '0644'
+  notify: Validate and reload nginx
+
+- name: Enable nginx
+  ansible.builtin.systemd_service:
+    name: nginx
+    enabled: true
+    state: started

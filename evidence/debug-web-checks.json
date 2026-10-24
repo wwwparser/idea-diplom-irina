@@ -1,0 +1,41 @@
+{
+  "checked_at": "2026-10-24T08:22:36.395768+00:00",
+  "checks": [
+    {
+      "host": "irina-debug-control.ru-central1.internal",
+      "http_status": 200,
+      "backend": "irina-debug-control",
+      "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99",
+      "restricted_status_checks": [
+        403,
+        403,
+        403,
+        403,
+        403,
+        403,
+        403,
+        403,
+        403,
+        403
+      ]
+    },
+    {
+      "host": "irina-debug-web.ru-central1.internal",
+      "http_status": 200,
+      "backend": "irina-debug-web",
+      "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99",
+      "restricted_status_checks": [
+        403,
+        403,
+        403,
+        403,
+        403,
+        403,
+        403,
+        403,
+        403,
+        403
+      ]
+    }
+  ]
+}

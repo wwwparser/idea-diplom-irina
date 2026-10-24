@@ -1,0 +1,52 @@
+---
+- name: Install guest metrics collector
+  ansible.builtin.copy:
+    src: irina-metrics
+    dest: /usr/local/sbin/irina-metrics
+    owner: root
+    group: root
+    mode: '0755'
+
+- name: Install metrics systemd service
+  ansible.builtin.copy:
+    dest: /etc/systemd/system/irina-metrics.service
+    mode: '0644'
+    content: |
+      [Unit]
+      Description=Collect guest USE metrics for Zabbix
+      [Service]
+      Type=oneshot
+      ExecStart=/usr/local/sbin/irina-metrics
+      ProtectHome=true
+      PrivateTmp=true
+      NoNewPrivileges=true
+  register: metrics_service
+
+- name: Install metrics timer
+  ansible.builtin.copy:
+    dest: /etc/systemd/system/irina-metrics.timer
+    mode: '0644'
+    content: |
+      [Unit]
+      Description=Refresh guest USE metrics every 15 seconds
+      [Timer]
+      OnBootSec=20
+      OnUnitActiveSec=15
+      AccuracySec=1
+      [Install]
+      WantedBy=timers.target
+  register: metrics_timer
+
+- name: Enable metrics timer
+  ansible.builtin.systemd_service:
+    name: irina-metrics.timer
+    enabled: true
+    state: started
+    daemon_reload: "{{ metrics_service.changed or metrics_timer.changed }}"
+
+- name: Configure read-only agent key
+  ansible.builtin.copy:
+    dest: /etc/zabbix/zabbix_agentd.d/irina.conf
+    mode: '0644'
+    content: "UserParameter=irina.health,cat /var/lib/irina-metrics/metrics.json\n"
+  notify: Restart agent

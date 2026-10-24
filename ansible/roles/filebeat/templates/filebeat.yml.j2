@@ -1,0 +1,20 @@
+filebeat.inputs:
+  - type: filestream
+    id: nginx-access
+    paths: [/var/log/nginx/access.log]
+    fields: {log_type: access}
+    fields_under_root: true
+  - type: filestream
+    id: nginx-error
+    paths: [/var/log/nginx/error.log]
+    fields: {log_type: error}
+    fields_under_root: true
+setup.ilm.enabled: false
+setup.template.enabled: false
+output.elasticsearch:
+  hosts: ["http://{{ elastic_host }}:9200"]
+  username: filebeat_writer
+  password: {{ filebeat_password | to_json }}
+  index: "nginx-%{+yyyy.MM.dd}"
+processors:
+  - add_host_metadata: ~

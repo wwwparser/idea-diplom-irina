@@ -1,0 +1,7 @@
+cloud_id            = "replace-cloud-id"
+folder_id           = "replace-folder-id"
+network_id          = "replace-existing-vpc-id"
+admin_cidr          = "203.0.113.10/32"
+ssh_public_key_path = "~/.ssh/id_ed25519.pub"
+image_id            = "replace-ubuntu-2204-image-id"
+preemptible         = false

@@ -1,0 +1,11 @@
+yandex_vpc_network.main: Creating...
+yandex_alb_http_router.web: Creating...
+yandex_vpc_gateway.nat: Creating...
+yandex_alb_http_router.web: Creation complete after 1s [id=ds7vi48f5chglfq855g3]
+yandex_vpc_gateway.nat: Creation complete after 1s [id=enpkq1um8np0nns8o1ki]
+
+Error: Error while requesting API to create network: x-request-id = a95b6815-bde1-462a-a088-2f1207251436 x-server-trace-id = 16c08a74bf9ba592:a01932bd2a80c5a6:4e1d1f24f65e0b4a:1 x-client-trace-id = 8ab799cf-2b66-445d-a840-76bfcf3d98dd rpc error: code = ResourceExhausted desc = Quota limit vpc.networks.count exceeded
+
+  with yandex_vpc_network.main,
+  on network.tf line 7, in resource "yandex_vpc_network" "main":
+   7: resource "yandex_vpc_network" "main" { name = "${var.prefix}-vpc" }

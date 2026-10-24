@@ -1,0 +1,18 @@
+{
+  "zabbix": {
+    "url": "https://158.160.239.100",
+    "http_status": 200,
+    "certificate_sha256": "cea77493436e9ff503460f7cf106cdbac13b0fcfd5b94d89001c10153c315f48",
+    "certificate_validated": true,
+    "read_only_reviewer_login": true,
+    "visible_hosts": 6
+  },
+  "kibana": {
+    "url": "https://153.51.118.76",
+    "http_status": 200,
+    "certificate_sha256": "aad9dab41b29de360f58cd06969db695395cc3084127fdaa0802f9818eb19731",
+    "certificate_validated": true,
+    "read_only_reviewer_login": true,
+    "dashboard_title": "Irina \u2014 nginx access and error logs"
+  }
+}

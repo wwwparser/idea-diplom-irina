@@ -1,0 +1,150 @@
+---
+- name: Validate PostgreSQL password
+  ansible.builtin.assert:
+    that:
+      - zabbix_db_password is match('^[A-Za-z0-9]{32,}$')
+      - "'REPLACE' not in zabbix_db_password"
+  no_log: true
+
+- name: Install native monitoring stack
+  ansible.builtin.apt:
+    name:
+      - postgresql
+      - python3-psycopg2
+      - zabbix-server-pgsql
+      - zabbix-frontend-php
+      - zabbix-sql-scripts
+      - php8.1-fpm
+      - php8.1-pgsql
+      - nginx
+
+- name: Enable PostgreSQL
+  ansible.builtin.systemd_service:
+    name: postgresql
+    state: started
+    enabled: true
+
+- name: Create database role
+  community.postgresql.postgresql_user:
+    name: zabbix
+    password: "{{ zabbix_db_password }}"
+  become_user: postgres
+  no_log: true
+
+- name: Create monitoring database
+  community.postgresql.postgresql_db:
+    name: zabbix
+    owner: zabbix
+    encoding: UTF8
+    template: template0
+  become_user: postgres
+
+- name: Check schema initialization
+  ansible.builtin.command:
+    argv: [psql, -d, zabbix, -tAc, "SELECT to_regclass('public.users')"]
+  become_user: postgres
+  register: schema
+  changed_when: false
+
+- name: Import initial schema as its owner
+  ansible.builtin.shell: >-
+    set -o pipefail;
+    zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz |
+    psql --host=127.0.0.1 --username=zabbix --dbname=zabbix --set=ON_ERROR_STOP=1 --single-transaction
+  args:
+    executable: /bin/bash
+  environment:
+    PGPASSWORD: "{{ zabbix_db_password }}"
+  when: schema.stdout | trim == ''
+  no_log: true
+
+- name: Configure native Zabbix server
+  ansible.builtin.template:
+    src: zabbix_server.conf.j2
+    dest: /etc/zabbix/zabbix_server.conf
+    owner: root
+    group: zabbix
+    mode: '0640'
+  no_log: true
+  notify: Restart monitoring
+
+- name: Create frontend configuration directory
+  ansible.builtin.file:
+    path: /etc/zabbix/web
+    state: directory
+    owner: root
+    group: www-data
+    mode: '0750'
+
+- name: Configure PHP frontend database connection
+  ansible.builtin.template:
+    src: zabbix.conf.php.j2
+    dest: /etc/zabbix/web/zabbix.conf.php
+    owner: root
+    group: www-data
+    mode: '0640'
+  no_log: true
+  notify: Restart monitoring
+
+- name: Set PHP timezone
+  ansible.builtin.copy:
+    dest: /etc/php/8.1/fpm/conf.d/99-zabbix.ini
+    content: "date.timezone = UTC\npost_max_size = 16M\nmax_execution_time = 300\nmax_input_time = 300\n"
+    mode: '0644'
+  notify: Restart monitoring
+
+- name: Configure nginx frontend
+  ansible.builtin.copy:
+    dest: /etc/nginx/sites-available/zabbix
+    content: |
+      server {
+          listen 8080 default_server;
+          root /usr/share/zabbix;
+          index index.php;
+          location / { try_files $uri $uri/ =404; }
+          location ~ /(?:conf|include|vendor)/ { deny all; }
+          location ~ \.php$ {
+              include snippets/fastcgi-php.conf;
+              fastcgi_pass unix:/run/php/php8.1-fpm.sock;
+          }
+      }
+    mode: '0644'
+  notify: Restart monitoring
+
+- name: Enable separate Zabbix virtual host
+  ansible.builtin.file:
+    src: /etc/nginx/sites-available/zabbix
+    dest: /etc/nginx/sites-enabled/zabbix
+    state: link
+  notify: Restart monitoring
+
+- name: Enable native monitoring services
+  ansible.builtin.systemd_service:
+    name: "{{ item }}"
+    enabled: true
+    state: started
+  loop: [zabbix-server, php8.1-fpm, nginx]
+
+- name: Create local dump directory
+  ansible.builtin.file:
+    path: /var/backups/zabbix
+    state: directory
+    owner: postgres
+    group: postgres
+    mode: '0700'
+
+- name: Install database dump and retention script
+  ansible.builtin.copy:
+    src: zabbix-dump
+    dest: /usr/local/sbin/zabbix-dump
+    owner: root
+    group: root
+    mode: '0755'
+
+- name: Configure daily logical database backup before disk snapshots
+  ansible.builtin.cron:
+    name: Zabbix consistent PostgreSQL dump
+    user: postgres
+    minute: '30'
+    hour: '0'
+    job: /usr/local/sbin/zabbix-dump

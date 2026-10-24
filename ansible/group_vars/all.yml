@@ -1,0 +1,5 @@
+zabbix_host: "{{ groups['monitoring'][0] }}"
+elastic_host: "{{ groups['elasticsearch'][0] }}"
+elastic_version: "8.19.23"
+elastic_apt_baseurl: https://mirror.yandex.ru/mirrors/elastic/8
+# Four different alphanumeric passwords, >=32 characters, in vars/secrets.yml.

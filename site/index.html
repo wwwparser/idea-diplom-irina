@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Инфраструктура Ирины</title>
+<style>
+body{margin:0;background:#f4f6f7;color:#172936;font:18px/1.65 system-ui,sans-serif}
+main{max-width:760px;margin:12vh auto;padding:32px}small{letter-spacing:.12em;color:#376b68}
+h1{font-size:clamp(32px,6vw,58px);line-height:1.12}p{max-width:620px}
+footer{margin-top:64px;border-top:1px solid #ccd7dc;padding-top:20px;font-size:14px}
+</style>
+<main><small>ДИПЛОМНЫЙ ПРОЕКТ · ИРИНА</small>
+<h1>Один сайт.<br>Две зоны доступности.</h1>
+<p>Статическая страница для проверки инфраструктуры. Одинаковый набор файлов развёртывается на двух веб-серверах nginx.</p>
+<p>Внешний трафик направляется через Application Load Balancer. Метрики собирает Zabbix, журналы nginx передаются в Elasticsearch.</p>
+<footer>Учебный стенд · Yandex Cloud · Terraform + Ansible</footer></main>
+</html>

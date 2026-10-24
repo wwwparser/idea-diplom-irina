@@ -1,0 +1,17 @@
+log_format irina_metrics escape=json '{"time":"$msec","status":"$status","duration":"$request_time"}';
+server {
+    listen 80 default_server;
+    server_name _;
+    root /var/www/html;
+    index index.html;
+    add_header X-Backend $hostname always;
+    access_log /var/log/nginx/access.log combined;
+    access_log /var/log/nginx/metrics.log irina_metrics;
+    error_log /var/log/nginx/error.log warn;
+    location / { try_files $uri $uri/ =404; }
+    location /nginx_status {
+        stub_status;
+        allow 127.0.0.1;
+        deny all;
+    }
+}

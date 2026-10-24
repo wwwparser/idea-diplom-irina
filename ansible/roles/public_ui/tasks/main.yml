@@ -1,0 +1,52 @@
+---
+- name: Install native TLS reverse proxy tools
+  ansible.builtin.apt:
+    name: [nginx, openssl]
+    state: present
+- name: Create private certificate directory
+  ansible.builtin.file:
+    path: /etc/nginx/irina-tls
+    state: directory
+    mode: '0700'
+- name: Create lab TLS certificate with actual public IP SAN
+  ansible.builtin.command:
+    argv:
+      - openssl
+      - req
+      - -x509
+      - -newkey
+      - rsa:2048
+      - -nodes
+      - -days
+      - '90'
+      - -subj
+      - "/CN={{ inventory_hostname }}"
+      - -addext
+      - "subjectAltName=IP:{{ cloud_public_ip }},DNS:{{ inventory_hostname }}"
+      - -keyout
+      - /etc/nginx/irina-tls/server.key
+      - -out
+      - /etc/nginx/irina-tls/server.crt
+    creates: /etc/nginx/irina-tls/server.crt
+  no_log: true
+- name: Restrict TLS private key
+  ansible.builtin.file:
+    path: /etc/nginx/irina-tls/server.key
+    mode: '0600'
+- name: Configure encrypted UI reverse proxy
+  ansible.builtin.template:
+    src: https.conf.j2
+    dest: /etc/nginx/sites-available/irina-https
+    mode: '0644'
+  notify: Reload UI nginx
+- name: Enable encrypted UI
+  ansible.builtin.file:
+    path: /etc/nginx/sites-enabled/irina-https
+    src: /etc/nginx/sites-available/irina-https
+    state: link
+  notify: Reload UI nginx
+- name: Enable UI nginx service
+  ansible.builtin.systemd_service:
+    name: nginx
+    enabled: true
+    state: started

@@ -1,0 +1,122 @@
+{
+  "checked_at": "2026-10-24T08:23:18.031056+00:00",
+  "profile": "debug-two-vms",
+  "zabbix_hosts": [
+    {
+      "hostid": "10683",
+      "host": "irina-debug-control.ru-central1.internal",
+      "status": "0"
+    },
+    {
+      "hostid": "10684",
+      "host": "irina-debug-web.ru-central1.internal",
+      "status": "0"
+    }
+  ],
+  "sample_metrics": [
+    {
+      "itemid": "50756",
+      "hostid": "10683",
+      "key_": "vm.memory.size[available]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792830176",
+      "lastvalue": "4648427520"
+    },
+    {
+      "itemid": "50781",
+      "hostid": "10683",
+      "key_": "system.cpu.util",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792830137",
+      "lastvalue": "70.610687"
+    },
+    {
+      "itemid": "50833",
+      "hostid": "10684",
+      "key_": "vm.memory.size[available]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792830133",
+      "lastvalue": "1697251328"
+    },
+    {
+      "itemid": "50858",
+      "hostid": "10684",
+      "key_": "system.cpu.util",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792830154",
+      "lastvalue": "0.07504400000000544"
+    }
+  ],
+  "elasticsearch_health": {
+    "cluster_name": "irina-logs",
+    "status": "green",
+    "timed_out": false,
+    "number_of_nodes": 1,
+    "number_of_data_nodes": 1,
+    "active_primary_shards": 39,
+    "active_shards": 39,
+    "relocating_shards": 0,
+    "initializing_shards": 0,
+    "unassigned_shards": 0,
+    "unassigned_primary_shards": 0,
+    "delayed_unassigned_shards": 0,
+    "number_of_pending_tasks": 0,
+    "number_of_in_flight_fetch": 0,
+    "task_max_waiting_in_queue_millis": 0,
+    "active_shards_percent_as_number": 100.0
+  },
+  "nginx_logs": {
+    "took": 47,
+    "timed_out": false,
+    "_shards": {
+      "total": 1,
+      "successful": 1,
+      "skipped": 0,
+      "failed": 0
+    },
+    "hits": {
+      "total": {
+        "value": 135,
+        "relation": "eq"
+      },
+      "max_score": null,
+      "hits": []
+    },
+    "aggregations": {
+      "hosts": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "key": "irina-debug-control",
+            "doc_count": 79
+          },
+          {
+            "key": "irina-debug-web",
+            "doc_count": 56
+          }
+        ]
+      },
+      "types": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "key": "access",
+            "doc_count": 101
+          },
+          {
+            "key": "error",
+            "doc_count": 34
+          }
+        ]
+      }
+    }
+  },
+  "kibana_data_view": "nginx-*",
+  "passwords": "stored locally; omitted from report"
+}

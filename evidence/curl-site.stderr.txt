@@ -1,0 +1,36 @@
+*   Trying 51.250.2.128:80...
+* Established connection to 51.250.2.128 (51.250.2.128 port 80) from 192.168.1.65 port 56562
+* using HTTP/1.x
+> GET / HTTP/1.1
+
+> Host: 51.250.2.128
+
+> User-Agent: curl/8.21.0
+
+> Accept: */*
+
+>
+
+* Request completely sent off
+< HTTP/1.1 200 OK
+
+< server: ycalb
+
+< date: Sat, 24 Oct 2026 09:21:47 GMT
+
+< content-type: text/html
+
+< content-length: 1182
+
+< last-modified: Sat, 24 Oct 2026 08:55:03 GMT
+
+< etag: "6adc7267-49e"
+
+< x-backend: irina-web-a
+
+< accept-ranges: bytes
+
+<
+
+{ [1182 bytes data]
+* Connection #0 to host 51.250.2.128:80 left intact

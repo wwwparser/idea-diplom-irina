@@ -1,0 +1,127 @@
+{
+  "checked_at": "2026-10-18T18:44:50.010582+00:00",
+  "folder_id": "b1gj512d2ohptmg6691o",
+  "created_resources": [
+    {
+      "type": "yandex_alb_http_router",
+      "name": "web",
+      "ids": [
+        "ds7vi48f5chglfq855g3"
+      ]
+    },
+    {
+      "type": "yandex_vpc_gateway",
+      "name": "nat",
+      "ids": [
+        "enpkq1um8np0nns8o1ki"
+      ]
+    }
+  ],
+  "vm_count": 0,
+  "quota_requests": [
+    {
+      "id": "atd8n4v55vg9c2oqds28",
+      "resource": {
+        "id": "b1gb7ghs6e3j9crn0t19",
+        "type": "resource-manager.cloud"
+      },
+      "created_at": "2026-10-18T10:51:47.349823Z",
+      "status": "PROCESSED",
+      "quota_limits": [
+        {
+          "quota_id": "compute.ssdDisks.size.ru-central1-d",
+          "desired_limit": 80530636800,
+          "approved_limit": 80530636800,
+          "status": "APPROVED"
+        }
+      ],
+      "created_by": "ajecrvfdh06a5m67ndd4"
+    },
+    {
+      "id": "atd3lehsjsa1shk5v9p8",
+      "resource": {
+        "id": "b1gb7ghs6e3j9crn0t19",
+        "type": "resource-manager.cloud"
+      },
+      "created_at": "2026-10-18T10:51:28.601158Z",
+      "status": "PENDING",
+      "quota_limits": [
+        {
+          "quota_id": "compute.hddDisks.size.ru-central1-d",
+          "desired_limit": 80530636800,
+          "status": "REJECTED",
+          "message": "Запросите, пожалуйста, квоту на SSD диски в зоне D - compute.ssdDisks.size.ru-central1-d"
+        },
+        {
+          "quota_id": "compute.instanceCores.count.ru-central1-d",
+          "desired_limit": 10,
+          "status": "PROCESSING"
+        }
+      ],
+      "created_by": "ajecrvfdh06a5m67ndd4"
+    },
+    {
+      "id": "atdck1pcjnqp8clqhkqr",
+      "resource": {
+        "id": "b1gb7ghs6e3j9crn0t19",
+        "type": "resource-manager.cloud"
+      },
+      "created_at": "2026-10-18T10:50:40.082104Z",
+      "status": "PENDING",
+      "quota_limits": [
+        {
+          "quota_id": "compute.instanceCores.count.ru-central1-b",
+          "desired_limit": 4,
+          "status": "REJECTED",
+          "message": "Пожалуйста, создайте новое обращение с запросом квоты в зоне доступности ru-central1-d"
+        },
+        {
+          "quota_id": "compute.hddDisks.size.ru-central1-a",
+          "desired_limit": 118111600640,
+          "status": "REJECTED",
+          "message": "Пожалуйста, создайте новое обращение с запросом квоты в зоне доступности ru-central1-d"
+        },
+        {
+          "quota_id": "compute.instanceMemory.size.ru-central1-b",
+          "desired_limit": 6442450944,
+          "status": "REJECTED",
+          "message": "Пожалуйста, создайте новое обращение с запросом квоты в зоне доступности ru-central1-d"
+        },
+        {
+          "quota_id": "compute.hddDisks.size.ru-central1-b",
+          "desired_limit": 37580963840,
+          "status": "REJECTED",
+          "message": "Пожалуйста, создайте новое обращение с запросом квоты в зоне доступности ru-central1-d"
+        },
+        {
+          "quota_id": "compute.snapshots.size",
+          "desired_limit": 858993459200,
+          "status": "PROCESSING"
+        },
+        {
+          "quota_id": "compute.instanceCores.count.ru-central1-a",
+          "desired_limit": 8,
+          "status": "REJECTED",
+          "message": "Пожалуйста, создайте новое обращение с запросом квоты в зоне доступности ru-central1-d"
+        },
+        {
+          "quota_id": "vpc.securityGroups.count",
+          "desired_limit": 12,
+          "status": "PROCESSING"
+        },
+        {
+          "quota_id": "compute.snapshots.count",
+          "desired_limit": 65,
+          "status": "PROCESSING"
+        },
+        {
+          "quota_id": "vpc.networks.count",
+          "desired_limit": 3,
+          "status": "PROCESSING"
+        }
+      ],
+      "created_by": "ajecrvfdh06a5m67ndd4"
+    }
+  ],
+  "launch_quota_ready": false
+}

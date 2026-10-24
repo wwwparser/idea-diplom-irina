@@ -1,0 +1,5 @@
+{
+  "daily_utc": "09:06",
+  "expression": "6 9 * * *",
+  "retention_hours": 168
+}

@@ -1,0 +1,278 @@
+{
+  "checked_at": "2026-10-24T09:08:52.287907+00:00",
+  "schedule": {
+    "id": "fd8caaap3o838q4b1oua",
+    "folderId": "b1gj512d2ohptmg6691o",
+    "createdAt": "2026-10-24T08:44:51Z",
+    "name": "irina-daily",
+    "status": "ACTIVE",
+    "schedulePolicy": {
+      "startAt": "1970-01-01T00:00:00Z",
+      "expression": "6 9 * * *"
+    },
+    "retentionPeriod": "604800s",
+    "snapshotSpec": {
+      "description": "Daily boot disk snapshot; crash-consistent"
+    }
+  },
+  "disks": {
+    "disks": [
+      {
+        "id": "bg0flbnsfq4iv460i9so",
+        "folderId": "b1gj512d2ohptmg6691o",
+        "createdAt": "2026-10-24T08:44:22Z",
+        "typeId": "network-hdd",
+        "zoneId": "ru-central1-e",
+        "size": "10737418240",
+        "blockSize": "4096",
+        "productIds": [
+          "f2e349fc1tvnn665j2rv"
+        ],
+        "status": "READY",
+        "sourceImageId": "fd8iej0ml2kuiu1tq40u",
+        "instanceIds": [
+          "bg03hv148csb1isvh14v"
+        ],
+        "diskPlacementPolicy": {},
+        "hardwareGeneration": {
+          "legacyFeatures": {
+            "pciTopology": "PCI_TOPOLOGY_V2"
+          }
+        }
+      },
+      {
+        "id": "bg0su4h10q8p9pgdspk5",
+        "folderId": "b1gj512d2ohptmg6691o",
+        "createdAt": "2026-10-24T08:44:23Z",
+        "typeId": "network-hdd",
+        "zoneId": "ru-central1-e",
+        "size": "10737418240",
+        "blockSize": "4096",
+        "productIds": [
+          "f2e349fc1tvnn665j2rv"
+        ],
+        "status": "READY",
+        "sourceImageId": "fd8iej0ml2kuiu1tq40u",
+        "instanceIds": [
+          "bg0fn7hmn33scoedfos9"
+        ],
+        "diskPlacementPolicy": {},
+        "hardwareGeneration": {
+          "legacyFeatures": {
+            "pciTopology": "PCI_TOPOLOGY_V2"
+          }
+        }
+      },
+      {
+        "id": "bg0u7pnuuq44nr05lj9r",
+        "folderId": "b1gj512d2ohptmg6691o",
+        "createdAt": "2026-10-24T08:44:22Z",
+        "typeId": "network-ssd",
+        "zoneId": "ru-central1-e",
+        "size": "10737418240",
+        "blockSize": "4096",
+        "productIds": [
+          "f2e349fc1tvnn665j2rv"
+        ],
+        "status": "READY",
+        "sourceImageId": "fd8iej0ml2kuiu1tq40u",
+        "instanceIds": [
+          "bg0qibjjn9po6c8v8p96"
+        ],
+        "diskPlacementPolicy": {},
+        "hardwareGeneration": {
+          "legacyFeatures": {
+            "pciTopology": "PCI_TOPOLOGY_V2"
+          }
+        }
+      },
+      {
+        "id": "fv46r9g34bn60m370kf2",
+        "folderId": "b1gj512d2ohptmg6691o",
+        "createdAt": "2026-10-24T08:44:27Z",
+        "typeId": "network-ssd",
+        "zoneId": "ru-central1-d",
+        "size": "21474836480",
+        "blockSize": "4096",
+        "productIds": [
+          "f2e349fc1tvnn665j2rv"
+        ],
+        "status": "READY",
+        "sourceImageId": "fd8iej0ml2kuiu1tq40u",
+        "instanceIds": [
+          "fv4eg7bk6j2p97hfmusf"
+        ],
+        "diskPlacementPolicy": {},
+        "hardwareGeneration": {
+          "legacyFeatures": {
+            "pciTopology": "PCI_TOPOLOGY_V2"
+          }
+        }
+      },
+      {
+        "id": "fv4fgu8hme45on9iclau",
+        "folderId": "b1gj512d2ohptmg6691o",
+        "createdAt": "2026-10-24T08:44:27Z",
+        "typeId": "network-ssd",
+        "zoneId": "ru-central1-d",
+        "size": "21474836480",
+        "blockSize": "4096",
+        "productIds": [
+          "f2e349fc1tvnn665j2rv"
+        ],
+        "status": "READY",
+        "sourceImageId": "fd8iej0ml2kuiu1tq40u",
+        "instanceIds": [
+          "fv40tftoe8eqebr2bhf2"
+        ],
+        "diskPlacementPolicy": {},
+        "hardwareGeneration": {
+          "legacyFeatures": {
+            "pciTopology": "PCI_TOPOLOGY_V2"
+          }
+        }
+      },
+      {
+        "id": "fv4iki9u3ne3ho4qtnnb",
+        "folderId": "b1gj512d2ohptmg6691o",
+        "createdAt": "2026-10-24T08:44:24Z",
+        "typeId": "network-ssd",
+        "zoneId": "ru-central1-d",
+        "size": "10737418240",
+        "blockSize": "4096",
+        "productIds": [
+          "f2e349fc1tvnn665j2rv"
+        ],
+        "status": "READY",
+        "sourceImageId": "fd8iej0ml2kuiu1tq40u",
+        "instanceIds": [
+          "fv4gfbkil8iflpqim86p"
+        ],
+        "diskPlacementPolicy": {},
+        "hardwareGeneration": {
+          "legacyFeatures": {
+            "pciTopology": "PCI_TOPOLOGY_V2"
+          }
+        }
+      }
+    ]
+  },
+  "scheduled_snapshots": {
+    "snapshots": [
+      {
+        "id": "fd894ggehtg4c51dhphv",
+        "folderId": "b1gj512d2ohptmg6691o",
+        "createdAt": "2026-10-24T09:06:02Z",
+        "name": "irina-bastion_bg0flbnsfq4iv460i9so_202610240906_ro3v",
+        "description": "Daily boot disk snapshot; crash-consistent",
+        "storageSize": "2843738112",
+        "diskSize": "10737418240",
+        "productIds": [
+          "f2e349fc1tvnn665j2rv"
+        ],
+        "status": "READY",
+        "sourceDiskId": "bg0flbnsfq4iv460i9so",
+        "hardwareGeneration": {
+          "legacyFeatures": {
+            "pciTopology": "PCI_TOPOLOGY_V1"
+          }
+        }
+      },
+      {
+        "id": "fd80paicvggithl6hjic",
+        "folderId": "b1gj512d2ohptmg6691o",
+        "createdAt": "2026-10-24T09:06:03Z",
+        "name": "irina-kibana_bg0su4h10q8p9pgdspk5_202610240906_brui",
+        "description": "Daily boot disk snapshot; crash-consistent",
+        "storageSize": "4789895168",
+        "diskSize": "10737418240",
+        "productIds": [
+          "f2e349fc1tvnn665j2rv"
+        ],
+        "status": "READY",
+        "sourceDiskId": "bg0su4h10q8p9pgdspk5",
+        "hardwareGeneration": {
+          "legacyFeatures": {
+            "pciTopology": "PCI_TOPOLOGY_V1"
+          }
+        }
+      },
+      {
+        "id": "fd8i9fgikgg567p3g0h0",
+        "folderId": "b1gj512d2ohptmg6691o",
+        "createdAt": "2026-10-24T09:06:04Z",
+        "name": "irina-web-a_bg0u7pnuuq44nr05lj9r_202610240906_db31",
+        "description": "Daily boot disk snapshot; crash-consistent",
+        "storageSize": "3133145088",
+        "diskSize": "10737418240",
+        "productIds": [
+          "f2e349fc1tvnn665j2rv"
+        ],
+        "status": "READY",
+        "sourceDiskId": "bg0u7pnuuq44nr05lj9r",
+        "hardwareGeneration": {
+          "legacyFeatures": {
+            "pciTopology": "PCI_TOPOLOGY_V1"
+          }
+        }
+      },
+      {
+        "id": "fd853ff3i5ffq0e3jadj",
+        "folderId": "b1gj512d2ohptmg6691o",
+        "createdAt": "2026-10-24T09:06:05Z",
+        "name": "irina-zabbix_fv46r9g34bn60m370kf2_202610240906_4tlr",
+        "description": "Daily boot disk snapshot; crash-consistent",
+        "storageSize": "3384803328",
+        "diskSize": "21474836480",
+        "productIds": [
+          "f2e349fc1tvnn665j2rv"
+        ],
+        "status": "READY",
+        "sourceDiskId": "fv46r9g34bn60m370kf2",
+        "hardwareGeneration": {
+          "legacyFeatures": {
+            "pciTopology": "PCI_TOPOLOGY_V1"
+          }
+        }
+      },
+      {
+        "id": "fd8fhe1380grfpluerlg",
+        "folderId": "b1gj512d2ohptmg6691o",
+        "createdAt": "2026-10-24T09:06:05Z",
+        "name": "irina-elasticsearch_fv4fgu8hme45on9iclau_202610240906_qd0t",
+        "description": "Daily boot disk snapshot; crash-consistent",
+        "storageSize": "4945084416",
+        "diskSize": "21474836480",
+        "productIds": [
+          "f2e349fc1tvnn665j2rv"
+        ],
+        "status": "READY",
+        "sourceDiskId": "fv4fgu8hme45on9iclau",
+        "hardwareGeneration": {
+          "legacyFeatures": {
+            "pciTopology": "PCI_TOPOLOGY_V1"
+          }
+        }
+      },
+      {
+        "id": "fd8dt3ul8ltcsmvobnfc",
+        "folderId": "b1gj512d2ohptmg6691o",
+        "createdAt": "2026-10-24T09:06:04Z",
+        "name": "irina-web-b_fv4iki9u3ne3ho4qtnnb_202610240906_h41b",
+        "description": "Daily boot disk snapshot; crash-consistent",
+        "storageSize": "3217031168",
+        "diskSize": "10737418240",
+        "productIds": [
+          "f2e349fc1tvnn665j2rv"
+        ],
+        "status": "READY",
+        "sourceDiskId": "fv4iki9u3ne3ho4qtnnb",
+        "hardwareGeneration": {
+          "legacyFeatures": {
+            "pciTopology": "PCI_TOPOLOGY_V1"
+          }
+        }
+      }
+    ]
+  }
+}

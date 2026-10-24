@@ -1,0 +1,18 @@
+{
+  "id": "atdrkrrjjbnu8ph4vp8e",
+  "resource": {
+    "id": "b1gb7ghs6e3j9crn0t19",
+    "type": "resource-manager.cloud"
+  },
+  "created_at": "2026-10-24T08:43:12.000746Z",
+  "status": "PROCESSED",
+  "quota_limits": [
+    {
+      "quota_id": "compute.snapshots.count",
+      "desired_limit": 80,
+      "approved_limit": 80,
+      "status": "APPROVED"
+    }
+  ],
+  "created_by": "ajecrvfdh06a5m67ndd4"
+}

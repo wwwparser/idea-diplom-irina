@@ -1,0 +1,36 @@
+---
+- name: Install native host firewall on public UI servers
+  ansible.builtin.apt:
+    name: ufw
+    state: present
+- name: Permit SSH via bastion subnet (cloud SG restricts exact bastion)
+  community.general.ufw:
+    rule: allow
+    port: '22'
+    proto: tcp
+    from_ip: 10.20.1.0/24
+- name: Permit this host's UI from administrator
+  community.general.ufw:
+    rule: allow
+    port: "{{ '8080' if inventory_hostname in groups['monitoring'] else '5601' }}"
+    proto: tcp
+    from_ip: "{{ admin_cidr }}"
+- name: Permit encrypted reviewer access
+  community.general.ufw:
+    rule: allow
+    port: '443'
+    proto: tcp
+- name: Permit active agents only on monitoring server
+  community.general.ufw:
+    rule: allow
+    port: '10051'
+    proto: tcp
+    from_ip: 10.20.0.0/16
+  when: inventory_hostname in groups['monitoring']
+- name: Deny other incoming traffic
+  community.general.ufw:
+    direction: incoming
+    policy: deny
+- name: Enable host firewall
+  community.general.ufw:
+    state: enabled

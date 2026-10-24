@@ -1,0 +1,214 @@
+{
+  "checked_at": "2026-10-24T09:08:51.563222+00:00",
+  "profile": "full-six-vms",
+  "zabbix_hosts": [
+    {
+      "hostid": "10683",
+      "host": "irina-web-a.ru-central1.internal",
+      "status": "0"
+    },
+    {
+      "hostid": "10684",
+      "host": "irina-web-b.ru-central1.internal",
+      "status": "0"
+    },
+    {
+      "hostid": "10685",
+      "host": "irina-zabbix.ru-central1.internal",
+      "status": "0"
+    },
+    {
+      "hostid": "10686",
+      "host": "irina-elasticsearch.ru-central1.internal",
+      "status": "0"
+    },
+    {
+      "hostid": "10687",
+      "host": "irina-kibana.ru-central1.internal",
+      "status": "0"
+    },
+    {
+      "hostid": "10688",
+      "host": "irina-bastion.ru-central1.internal",
+      "status": "0"
+    }
+  ],
+  "sample_metrics": [
+    {
+      "itemid": "50756",
+      "hostid": "10683",
+      "key_": "vm.memory.size[available]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832876",
+      "lastvalue": "1711841280"
+    },
+    {
+      "itemid": "50781",
+      "hostid": "10683",
+      "key_": "system.cpu.util",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832897",
+      "lastvalue": "0.42499999999999716"
+    },
+    {
+      "itemid": "50833",
+      "hostid": "10684",
+      "key_": "vm.memory.size[available]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832893",
+      "lastvalue": "1715470336"
+    },
+    {
+      "itemid": "50858",
+      "hostid": "10684",
+      "key_": "system.cpu.util",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832914",
+      "lastvalue": "0.5168390000000045"
+    },
+    {
+      "itemid": "50910",
+      "hostid": "10685",
+      "key_": "vm.memory.size[available]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832910",
+      "lastvalue": "3423928320"
+    },
+    {
+      "itemid": "50935",
+      "hostid": "10685",
+      "key_": "system.cpu.util",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832871",
+      "lastvalue": "3.636970000000005"
+    },
+    {
+      "itemid": "50981",
+      "hostid": "10686",
+      "key_": "vm.memory.size[available]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832921",
+      "lastvalue": "2140139520"
+    },
+    {
+      "itemid": "51006",
+      "hostid": "10686",
+      "key_": "system.cpu.util",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832882",
+      "lastvalue": "5.869583000000006"
+    },
+    {
+      "itemid": "51052",
+      "hostid": "10687",
+      "key_": "vm.memory.size[available]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832872",
+      "lastvalue": "2563928064"
+    },
+    {
+      "itemid": "51077",
+      "hostid": "10687",
+      "key_": "system.cpu.util",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832893",
+      "lastvalue": "2.0963840000000005"
+    },
+    {
+      "itemid": "51123",
+      "hostid": "10688",
+      "key_": "vm.memory.size[available]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832883",
+      "lastvalue": "1752596480"
+    },
+    {
+      "itemid": "51148",
+      "hostid": "10688",
+      "key_": "system.cpu.util",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832904",
+      "lastvalue": "0.7753880000000066"
+    }
+  ],
+  "elasticsearch_health": {
+    "cluster_name": "irina-logs",
+    "status": "green",
+    "timed_out": false,
+    "number_of_nodes": 1,
+    "number_of_data_nodes": 1,
+    "active_primary_shards": 40,
+    "active_shards": 40,
+    "relocating_shards": 0,
+    "initializing_shards": 0,
+    "unassigned_shards": 0,
+    "unassigned_primary_shards": 0,
+    "delayed_unassigned_shards": 0,
+    "number_of_pending_tasks": 0,
+    "number_of_in_flight_fetch": 0,
+    "task_max_waiting_in_queue_millis": 0,
+    "active_shards_percent_as_number": 100.0
+  },
+  "nginx_logs": {
+    "took": 16,
+    "timed_out": false,
+    "_shards": {
+      "total": 1,
+      "successful": 1,
+      "skipped": 0,
+      "failed": 0
+    },
+    "hits": {
+      "total": {
+        "value": 1005,
+        "relation": "eq"
+      },
+      "max_score": null,
+      "hits": []
+    },
+    "aggregations": {
+      "hosts": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "key": "irina-web-a",
+            "doc_count": 580
+          },
+          {
+            "key": "irina-web-b",
+            "doc_count": 425
+          }
+        ]
+      },
+      "types": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "key": "access",
+            "doc_count": 999
+          },
+          {
+            "key": "error",
+            "doc_count": 6
+          }
+        ]
+      }
+    }
+  },
+  "kibana_data_view": "nginx-*",
+  "passwords": "stored locally; omitted from report"
+}

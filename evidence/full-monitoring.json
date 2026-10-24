@@ -1,0 +1,1562 @@
+{
+  "checked_at_epoch": 1792832857,
+  "hosts": [
+    {
+      "hostid": "10683",
+      "host": "irina-web-a.ru-central1.internal"
+    },
+    {
+      "hostid": "10684",
+      "host": "irina-web-b.ru-central1.internal"
+    },
+    {
+      "hostid": "10685",
+      "host": "irina-zabbix.ru-central1.internal"
+    },
+    {
+      "hostid": "10686",
+      "host": "irina-elasticsearch.ru-central1.internal"
+    },
+    {
+      "hostid": "10687",
+      "host": "irina-kibana.ru-central1.internal"
+    },
+    {
+      "hostid": "10688",
+      "host": "irina-bastion.ru-central1.internal"
+    }
+  ],
+  "items": [
+    {
+      "itemid": "51269",
+      "hostid": "10685",
+      "key_": "irina.threshold[90]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832849",
+      "lastvalue": "90"
+    },
+    {
+      "itemid": "51270",
+      "hostid": "10685",
+      "key_": "irina.threshold[50]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832850",
+      "lastvalue": "50"
+    },
+    {
+      "itemid": "51271",
+      "hostid": "10685",
+      "key_": "irina.threshold[0]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832851",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51272",
+      "hostid": "10685",
+      "key_": "irina.threshold[5]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832852",
+      "lastvalue": "5"
+    },
+    {
+      "itemid": "51274",
+      "hostid": "10686",
+      "key_": "irina.cpu_util",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832853",
+      "lastvalue": "7.03"
+    },
+    {
+      "itemid": "51276",
+      "hostid": "10686",
+      "key_": "irina.cpu_queue",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832853",
+      "lastvalue": "1"
+    },
+    {
+      "itemid": "51294",
+      "hostid": "10686",
+      "key_": "irina.threshold[80]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832844",
+      "lastvalue": "80"
+    },
+    {
+      "itemid": "51295",
+      "hostid": "10686",
+      "key_": "irina.threshold[1]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832845",
+      "lastvalue": "1"
+    },
+    {
+      "itemid": "51187",
+      "hostid": "10683",
+      "key_": "irina.memory_psi_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832848",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51188",
+      "hostid": "10683",
+      "key_": "irina.io_psi_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832848",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51189",
+      "hostid": "10683",
+      "key_": "irina.disk_used_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832848",
+      "lastvalue": "24.24222870585695"
+    },
+    {
+      "itemid": "51190",
+      "hostid": "10683",
+      "key_": "irina.disk_util_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832848",
+      "lastvalue": "0.3500086421418194"
+    },
+    {
+      "itemid": "51191",
+      "hostid": "10683",
+      "key_": "irina.disk_await_ms",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832848",
+      "lastvalue": "1.5"
+    },
+    {
+      "itemid": "51192",
+      "hostid": "10683",
+      "key_": "irina.disk_queue",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832848",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51193",
+      "hostid": "10683",
+      "key_": "irina.disk_io_errors_60s",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832848",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51296",
+      "hostid": "10686",
+      "key_": "irina.threshold[90]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832846",
+      "lastvalue": "90"
+    },
+    {
+      "itemid": "51195",
+      "hostid": "10683",
+      "key_": "irina.net_rx_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832848",
+      "lastvalue": "582.3268783634521"
+    },
+    {
+      "itemid": "51297",
+      "hostid": "10686",
+      "key_": "irina.threshold[50]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832847",
+      "lastvalue": "50"
+    },
+    {
+      "itemid": "51298",
+      "hostid": "10686",
+      "key_": "irina.threshold[0]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832848",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51299",
+      "hostid": "10686",
+      "key_": "irina.threshold[5]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832849",
+      "lastvalue": "5"
+    },
+    {
+      "itemid": "51196",
+      "hostid": "10683",
+      "key_": "irina.net_tx_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832848",
+      "lastvalue": "2079.3638420386055"
+    },
+    {
+      "itemid": "51197",
+      "hostid": "10683",
+      "key_": "irina.net_errors_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832848",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51198",
+      "hostid": "10683",
+      "key_": "irina.net_drops_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832848",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51199",
+      "hostid": "10683",
+      "key_": "irina.http_rps",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832848",
+      "lastvalue": "0.9375231485941592"
+    },
+    {
+      "itemid": "51301",
+      "hostid": "10687",
+      "key_": "irina.cpu_util",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832850",
+      "lastvalue": "1.6"
+    },
+    {
+      "itemid": "51303",
+      "hostid": "10687",
+      "key_": "irina.cpu_queue",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832850",
+      "lastvalue": "1"
+    },
+    {
+      "itemid": "51321",
+      "hostid": "10687",
+      "key_": "irina.threshold[80]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832841",
+      "lastvalue": "80"
+    },
+    {
+      "itemid": "51200",
+      "hostid": "10683",
+      "key_": "irina.http_active",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832848",
+      "lastvalue": "12"
+    },
+    {
+      "itemid": "51201",
+      "hostid": "10683",
+      "key_": "irina.http_waiting",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832848",
+      "lastvalue": "11"
+    },
+    {
+      "itemid": "51322",
+      "hostid": "10687",
+      "key_": "irina.threshold[1]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832842",
+      "lastvalue": "1"
+    },
+    {
+      "itemid": "51323",
+      "hostid": "10687",
+      "key_": "irina.threshold[90]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832843",
+      "lastvalue": "90"
+    },
+    {
+      "itemid": "51324",
+      "hostid": "10687",
+      "key_": "irina.threshold[50]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832844",
+      "lastvalue": "50"
+    },
+    {
+      "itemid": "51202",
+      "hostid": "10683",
+      "key_": "irina.http_requests_60s",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832848",
+      "lastvalue": "59"
+    },
+    {
+      "itemid": "51203",
+      "hostid": "10683",
+      "key_": "irina.http_5xx_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832848",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51325",
+      "hostid": "10687",
+      "key_": "irina.threshold[0]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832845",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51326",
+      "hostid": "10687",
+      "key_": "irina.threshold[5]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832846",
+      "lastvalue": "5"
+    },
+    {
+      "itemid": "51328",
+      "hostid": "10688",
+      "key_": "irina.cpu_util",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832847",
+      "lastvalue": "0.34"
+    },
+    {
+      "itemid": "51204",
+      "hostid": "10683",
+      "key_": "irina.http_latency_seconds",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832848",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51206",
+      "hostid": "10683",
+      "key_": "irina.threshold[80]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832846",
+      "lastvalue": "80"
+    },
+    {
+      "itemid": "51207",
+      "hostid": "10683",
+      "key_": "irina.threshold[1]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832847",
+      "lastvalue": "1"
+    },
+    {
+      "itemid": "51208",
+      "hostid": "10683",
+      "key_": "irina.threshold[90]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832848",
+      "lastvalue": "90"
+    },
+    {
+      "itemid": "51209",
+      "hostid": "10683",
+      "key_": "irina.threshold[50]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832849",
+      "lastvalue": "50"
+    },
+    {
+      "itemid": "51210",
+      "hostid": "10683",
+      "key_": "irina.threshold[0]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832850",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51211",
+      "hostid": "10683",
+      "key_": "irina.threshold[5]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832851",
+      "lastvalue": "5"
+    },
+    {
+      "itemid": "51213",
+      "hostid": "10684",
+      "key_": "irina.cpu_util",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832837",
+      "lastvalue": "0.28"
+    },
+    {
+      "itemid": "51214",
+      "hostid": "10684",
+      "key_": "irina.cpu_load_per_core",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832837",
+      "lastvalue": "0.046142578125"
+    },
+    {
+      "itemid": "51215",
+      "hostid": "10684",
+      "key_": "irina.cpu_queue",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832837",
+      "lastvalue": "1"
+    },
+    {
+      "itemid": "51216",
+      "hostid": "10684",
+      "key_": "irina.ram_used_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832837",
+      "lastvalue": "16.914199958600705"
+    },
+    {
+      "itemid": "51330",
+      "hostid": "10688",
+      "key_": "irina.cpu_queue",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832847",
+      "lastvalue": "1"
+    },
+    {
+      "itemid": "51348",
+      "hostid": "10688",
+      "key_": "irina.threshold[80]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832838",
+      "lastvalue": "80"
+    },
+    {
+      "itemid": "51349",
+      "hostid": "10688",
+      "key_": "irina.threshold[1]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832839",
+      "lastvalue": "1"
+    },
+    {
+      "itemid": "51217",
+      "hostid": "10684",
+      "key_": "irina.ram_available_bytes",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832837",
+      "lastvalue": "1709846528"
+    },
+    {
+      "itemid": "51350",
+      "hostid": "10688",
+      "key_": "irina.threshold[90]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832840",
+      "lastvalue": "90"
+    },
+    {
+      "itemid": "51218",
+      "hostid": "10684",
+      "key_": "irina.swap_pages_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832837",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51351",
+      "hostid": "10688",
+      "key_": "irina.threshold[50]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832841",
+      "lastvalue": "50"
+    },
+    {
+      "itemid": "51352",
+      "hostid": "10688",
+      "key_": "irina.threshold[0]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832842",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51219",
+      "hostid": "10684",
+      "key_": "irina.oom_kills_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832837",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51220",
+      "hostid": "10684",
+      "key_": "irina.cpu_psi_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832837",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51353",
+      "hostid": "10688",
+      "key_": "irina.threshold[5]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832843",
+      "lastvalue": "5"
+    },
+    {
+      "itemid": "51221",
+      "hostid": "10684",
+      "key_": "irina.memory_psi_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832837",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51222",
+      "hostid": "10684",
+      "key_": "irina.io_psi_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832837",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51223",
+      "hostid": "10684",
+      "key_": "irina.disk_used_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832837",
+      "lastvalue": "24.025999768883445"
+    },
+    {
+      "itemid": "51224",
+      "hostid": "10684",
+      "key_": "irina.disk_util_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832837",
+      "lastvalue": "0.5000240143745889"
+    },
+    {
+      "itemid": "51225",
+      "hostid": "10684",
+      "key_": "irina.disk_await_ms",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832837",
+      "lastvalue": "1.5978260869565215"
+    },
+    {
+      "itemid": "51226",
+      "hostid": "10684",
+      "key_": "irina.disk_queue",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832837",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51227",
+      "hostid": "10684",
+      "key_": "irina.disk_io_errors_60s",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832837",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51229",
+      "hostid": "10684",
+      "key_": "irina.net_rx_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832837",
+      "lastvalue": "567.1522383043774"
+    },
+    {
+      "itemid": "51230",
+      "hostid": "10684",
+      "key_": "irina.net_tx_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832837",
+      "lastvalue": "2050.8484949573763"
+    },
+    {
+      "itemid": "51231",
+      "hostid": "10684",
+      "key_": "irina.net_errors_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832837",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51232",
+      "hostid": "10684",
+      "key_": "irina.net_drops_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832837",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51233",
+      "hostid": "10684",
+      "key_": "irina.http_rps",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832837",
+      "lastvalue": "1.0000480287491778"
+    },
+    {
+      "itemid": "51234",
+      "hostid": "10684",
+      "key_": "irina.http_active",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832837",
+      "lastvalue": "12"
+    },
+    {
+      "itemid": "51235",
+      "hostid": "10684",
+      "key_": "irina.http_waiting",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832837",
+      "lastvalue": "11"
+    },
+    {
+      "itemid": "51236",
+      "hostid": "10684",
+      "key_": "irina.http_requests_60s",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832837",
+      "lastvalue": "82"
+    },
+    {
+      "itemid": "51237",
+      "hostid": "10684",
+      "key_": "irina.http_5xx_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832837",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51238",
+      "hostid": "10684",
+      "key_": "irina.http_latency_seconds",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832837",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51240",
+      "hostid": "10684",
+      "key_": "irina.threshold[80]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832850",
+      "lastvalue": "80"
+    },
+    {
+      "itemid": "51241",
+      "hostid": "10684",
+      "key_": "irina.threshold[1]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832851",
+      "lastvalue": "1"
+    },
+    {
+      "itemid": "51242",
+      "hostid": "10684",
+      "key_": "irina.threshold[90]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832852",
+      "lastvalue": "90"
+    },
+    {
+      "itemid": "51243",
+      "hostid": "10684",
+      "key_": "irina.threshold[50]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832853",
+      "lastvalue": "50"
+    },
+    {
+      "itemid": "51244",
+      "hostid": "10684",
+      "key_": "irina.threshold[0]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832854",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51245",
+      "hostid": "10684",
+      "key_": "irina.threshold[5]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832855",
+      "lastvalue": "5"
+    },
+    {
+      "itemid": "51247",
+      "hostid": "10685",
+      "key_": "irina.cpu_util",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832841",
+      "lastvalue": "1.87"
+    },
+    {
+      "itemid": "51248",
+      "hostid": "10685",
+      "key_": "irina.cpu_load_per_core",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832841",
+      "lastvalue": "0.10888671875"
+    },
+    {
+      "itemid": "51249",
+      "hostid": "10685",
+      "key_": "irina.cpu_queue",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832841",
+      "lastvalue": "5"
+    },
+    {
+      "itemid": "51250",
+      "hostid": "10685",
+      "key_": "irina.ram_used_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832841",
+      "lastvalue": "16.514495467825306"
+    },
+    {
+      "itemid": "51251",
+      "hostid": "10685",
+      "key_": "irina.ram_available_bytes",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832841",
+      "lastvalue": "3423584256"
+    },
+    {
+      "itemid": "51252",
+      "hostid": "10685",
+      "key_": "irina.swap_pages_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832841",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51253",
+      "hostid": "10685",
+      "key_": "irina.oom_kills_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832841",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51254",
+      "hostid": "10685",
+      "key_": "irina.cpu_psi_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832841",
+      "lastvalue": "0.01"
+    },
+    {
+      "itemid": "51179",
+      "hostid": "10683",
+      "key_": "irina.cpu_util",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832848",
+      "lastvalue": "0.44"
+    },
+    {
+      "itemid": "51180",
+      "hostid": "10683",
+      "key_": "irina.cpu_load_per_core",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832848",
+      "lastvalue": "0.03515625"
+    },
+    {
+      "itemid": "51181",
+      "hostid": "10683",
+      "key_": "irina.cpu_queue",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832848",
+      "lastvalue": "1"
+    },
+    {
+      "itemid": "51182",
+      "hostid": "10683",
+      "key_": "irina.ram_used_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832848",
+      "lastvalue": "16.961371272072988"
+    },
+    {
+      "itemid": "51183",
+      "hostid": "10683",
+      "key_": "irina.ram_available_bytes",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832848",
+      "lastvalue": "1708875776"
+    },
+    {
+      "itemid": "51255",
+      "hostid": "10685",
+      "key_": "irina.memory_psi_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832841",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51260",
+      "hostid": "10685",
+      "key_": "irina.disk_queue",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832841",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51265",
+      "hostid": "10685",
+      "key_": "irina.net_errors_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832841",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51184",
+      "hostid": "10683",
+      "key_": "irina.swap_pages_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832848",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51256",
+      "hostid": "10685",
+      "key_": "irina.io_psi_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832841",
+      "lastvalue": "0.02"
+    },
+    {
+      "itemid": "51261",
+      "hostid": "10685",
+      "key_": "irina.disk_io_errors_60s",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832841",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51266",
+      "hostid": "10685",
+      "key_": "irina.net_drops_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832841",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51185",
+      "hostid": "10683",
+      "key_": "irina.oom_kills_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832848",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51257",
+      "hostid": "10685",
+      "key_": "irina.disk_used_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832841",
+      "lastvalue": "12.888681110859535"
+    },
+    {
+      "itemid": "51263",
+      "hostid": "10685",
+      "key_": "irina.net_rx_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832841",
+      "lastvalue": "11910.174741108056"
+    },
+    {
+      "itemid": "51267",
+      "hostid": "10685",
+      "key_": "irina.threshold[80]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832847",
+      "lastvalue": "80"
+    },
+    {
+      "itemid": "51186",
+      "hostid": "10683",
+      "key_": "irina.cpu_psi_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832848",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51258",
+      "hostid": "10685",
+      "key_": "irina.disk_util_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832841",
+      "lastvalue": "1.4683103775780837"
+    },
+    {
+      "itemid": "51264",
+      "hostid": "10685",
+      "key_": "irina.net_tx_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832841",
+      "lastvalue": "1341.3886330755713"
+    },
+    {
+      "itemid": "51268",
+      "hostid": "10685",
+      "key_": "irina.threshold[1]",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832848",
+      "lastvalue": "1"
+    },
+    {
+      "itemid": "51194",
+      "hostid": "10683",
+      "key_": "irina.kernel_errors_60s",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832848",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51205",
+      "hostid": "10683",
+      "key_": "irina.http_sample_truncated",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832848",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51259",
+      "hostid": "10685",
+      "key_": "irina.disk_await_ms",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832841",
+      "lastvalue": "2.030534351145038"
+    },
+    {
+      "itemid": "51228",
+      "hostid": "10684",
+      "key_": "irina.kernel_errors_60s",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832837",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51239",
+      "hostid": "10684",
+      "key_": "irina.http_sample_truncated",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832837",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51262",
+      "hostid": "10685",
+      "key_": "irina.kernel_errors_60s",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832841",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51275",
+      "hostid": "10686",
+      "key_": "irina.cpu_load_per_core",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832853",
+      "lastvalue": "0.201416015625"
+    },
+    {
+      "itemid": "51277",
+      "hostid": "10686",
+      "key_": "irina.ram_used_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832853",
+      "lastvalue": "47.80617554990442"
+    },
+    {
+      "itemid": "51278",
+      "hostid": "10686",
+      "key_": "irina.ram_available_bytes",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832853",
+      "lastvalue": "2140368896"
+    },
+    {
+      "itemid": "51279",
+      "hostid": "10686",
+      "key_": "irina.swap_pages_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832853",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51280",
+      "hostid": "10686",
+      "key_": "irina.oom_kills_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832853",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51281",
+      "hostid": "10686",
+      "key_": "irina.cpu_psi_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832853",
+      "lastvalue": "0.18"
+    },
+    {
+      "itemid": "51282",
+      "hostid": "10686",
+      "key_": "irina.memory_psi_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832853",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51283",
+      "hostid": "10686",
+      "key_": "irina.io_psi_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832853",
+      "lastvalue": "0.59"
+    },
+    {
+      "itemid": "51284",
+      "hostid": "10686",
+      "key_": "irina.disk_used_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832853",
+      "lastvalue": "19.807608042312875"
+    },
+    {
+      "itemid": "51285",
+      "hostid": "10686",
+      "key_": "irina.disk_util_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832853",
+      "lastvalue": "2.8843130157989187"
+    },
+    {
+      "itemid": "51286",
+      "hostid": "10686",
+      "key_": "irina.disk_await_ms",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832853",
+      "lastvalue": "2.0595744680851067"
+    },
+    {
+      "itemid": "51287",
+      "hostid": "10686",
+      "key_": "irina.disk_queue",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832853",
+      "lastvalue": "1"
+    },
+    {
+      "itemid": "51288",
+      "hostid": "10686",
+      "key_": "irina.disk_io_errors_60s",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832853",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51289",
+      "hostid": "10686",
+      "key_": "irina.kernel_errors_60s",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832853",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51290",
+      "hostid": "10686",
+      "key_": "irina.net_rx_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832853",
+      "lastvalue": "10828.191780145107"
+    },
+    {
+      "itemid": "51291",
+      "hostid": "10686",
+      "key_": "irina.net_tx_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832853",
+      "lastvalue": "5692.295675886942"
+    },
+    {
+      "itemid": "51292",
+      "hostid": "10686",
+      "key_": "irina.net_errors_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832853",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51293",
+      "hostid": "10686",
+      "key_": "irina.net_drops_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832853",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51302",
+      "hostid": "10687",
+      "key_": "irina.cpu_load_per_core",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832850",
+      "lastvalue": "0.392822265625"
+    },
+    {
+      "itemid": "51304",
+      "hostid": "10687",
+      "key_": "irina.ram_used_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832850",
+      "lastvalue": "37.37022735308747"
+    },
+    {
+      "itemid": "51305",
+      "hostid": "10687",
+      "key_": "irina.ram_available_bytes",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832850",
+      "lastvalue": "2568327168"
+    },
+    {
+      "itemid": "51306",
+      "hostid": "10687",
+      "key_": "irina.swap_pages_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832850",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51307",
+      "hostid": "10687",
+      "key_": "irina.oom_kills_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832850",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51308",
+      "hostid": "10687",
+      "key_": "irina.cpu_psi_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832850",
+      "lastvalue": "0.03"
+    },
+    {
+      "itemid": "51309",
+      "hostid": "10687",
+      "key_": "irina.memory_psi_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832850",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51310",
+      "hostid": "10687",
+      "key_": "irina.io_psi_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832850",
+      "lastvalue": "0.31"
+    },
+    {
+      "itemid": "51311",
+      "hostid": "10687",
+      "key_": "irina.disk_used_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832850",
+      "lastvalue": "41.59313533223848"
+    },
+    {
+      "itemid": "51312",
+      "hostid": "10687",
+      "key_": "irina.disk_util_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832850",
+      "lastvalue": "0.2500300108155179"
+    },
+    {
+      "itemid": "51313",
+      "hostid": "10687",
+      "key_": "irina.disk_await_ms",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832850",
+      "lastvalue": "1.6666666666666667"
+    },
+    {
+      "itemid": "51314",
+      "hostid": "10687",
+      "key_": "irina.disk_queue",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832850",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51315",
+      "hostid": "10687",
+      "key_": "irina.disk_io_errors_60s",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832850",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51316",
+      "hostid": "10687",
+      "key_": "irina.kernel_errors_60s",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832850",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51317",
+      "hostid": "10687",
+      "key_": "irina.net_rx_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832850",
+      "lastvalue": "4935.279875984804"
+    },
+    {
+      "itemid": "51318",
+      "hostid": "10687",
+      "key_": "irina.net_tx_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832850",
+      "lastvalue": "13165.517741999205"
+    },
+    {
+      "itemid": "51319",
+      "hostid": "10687",
+      "key_": "irina.net_errors_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832850",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51320",
+      "hostid": "10687",
+      "key_": "irina.net_drops_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832850",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51329",
+      "hostid": "10688",
+      "key_": "irina.cpu_load_per_core",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832847",
+      "lastvalue": "0.03076171875"
+    },
+    {
+      "itemid": "51331",
+      "hostid": "10688",
+      "key_": "irina.ram_used_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832847",
+      "lastvalue": "15.398945910227212"
+    },
+    {
+      "itemid": "51332",
+      "hostid": "10688",
+      "key_": "irina.ram_available_bytes",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832847",
+      "lastvalue": "1741029376"
+    },
+    {
+      "itemid": "51333",
+      "hostid": "10688",
+      "key_": "irina.swap_pages_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832847",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51334",
+      "hostid": "10688",
+      "key_": "irina.oom_kills_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832847",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51335",
+      "hostid": "10688",
+      "key_": "irina.cpu_psi_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832847",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51336",
+      "hostid": "10688",
+      "key_": "irina.memory_psi_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832847",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51337",
+      "hostid": "10688",
+      "key_": "irina.io_psi_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832847",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51338",
+      "hostid": "10688",
+      "key_": "irina.disk_used_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832847",
+      "lastvalue": "20.361326271626055"
+    },
+    {
+      "itemid": "51339",
+      "hostid": "10688",
+      "key_": "irina.disk_util_pct",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832847",
+      "lastvalue": "0.17500041201807706"
+    },
+    {
+      "itemid": "51340",
+      "hostid": "10688",
+      "key_": "irina.disk_await_ms",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832847",
+      "lastvalue": "1.0392156862745099"
+    },
+    {
+      "itemid": "51341",
+      "hostid": "10688",
+      "key_": "irina.disk_queue",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832847",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51342",
+      "hostid": "10688",
+      "key_": "irina.disk_io_errors_60s",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832847",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51343",
+      "hostid": "10688",
+      "key_": "irina.kernel_errors_60s",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832847",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51344",
+      "hostid": "10688",
+      "key_": "irina.net_rx_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832847",
+      "lastvalue": "1341.1281575299633"
+    },
+    {
+      "itemid": "51345",
+      "hostid": "10688",
+      "key_": "irina.net_tx_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832847",
+      "lastvalue": "1462.3159428524818"
+    },
+    {
+      "itemid": "51346",
+      "hostid": "10688",
+      "key_": "irina.net_errors_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832847",
+      "lastvalue": "0"
+    },
+    {
+      "itemid": "51347",
+      "hostid": "10688",
+      "key_": "irina.net_drops_per_second",
+      "state": "0",
+      "error": "",
+      "lastclock": "1792832847",
+      "lastvalue": "0"
+    }
+  ],
+  "unsupported_or_no_data": 0
+}

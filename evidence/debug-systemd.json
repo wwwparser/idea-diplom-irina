@@ -1,0 +1,16 @@
+{
+  "irina-debug-control": {
+    "nginx": "active",
+    "postgresql": "active",
+    "zabbix-server": "active",
+    "zabbix-agent": "active",
+    "elasticsearch": "active",
+    "kibana": "active",
+    "filebeat": "active"
+  },
+  "irina-debug-web": {
+    "nginx": "active",
+    "zabbix-agent": "active",
+    "filebeat": "active"
+  }
+}

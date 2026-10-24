@@ -1,0 +1,10 @@
+#!/bin/sh
+set -eu
+umask 077
+dump_dir=/var/backups/zabbix
+cd "$dump_dir"
+dump_file="$dump_dir/zabbix-$(date -u +%Y%m%dT%H%M%SZ).dump"
+trap 'rm -f "$dump_file.tmp"' EXIT HUP INT TERM
+pg_dump --format=custom --file="$dump_file.tmp" zabbix
+mv "$dump_file.tmp" "$dump_file"
+find "$dump_dir" -type f -name 'zabbix-*.dump' -mtime +6 -delete

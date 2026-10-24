@@ -1,0 +1,125 @@
+[
+  {
+    "id": "irina-nginx-logs",
+    "type": "dashboard",
+    "namespaces": [
+      "default"
+    ],
+    "migrationVersion": {
+      "dashboard": "10.3.0"
+    },
+    "updated_at": "2026-10-24T09:07:22.133Z",
+    "created_at": "2026-10-24T09:07:22.133Z",
+    "version": "WzE0LDJd",
+    "attributes": {
+      "title": "Irina — nginx access and error logs",
+      "description": "Two nginx sources in different availability zones.",
+      "panelsJSON": "[{\"type\": \"search\", \"panelRefName\": \"panel_0\", \"panelIndex\": \"0\", \"gridData\": {\"x\": 0, \"y\": 0, \"w\": 48, \"h\": 14, \"i\": \"0\"}, \"embeddableConfig\": {}}, {\"type\": \"search\", \"panelRefName\": \"panel_1\", \"panelIndex\": \"1\", \"gridData\": {\"x\": 0, \"y\": 14, \"w\": 48, \"h\": 14, \"i\": \"1\"}, \"embeddableConfig\": {}}]",
+      "optionsJSON": "{\"useMargins\": true, \"hidePanelTitles\": false}",
+      "timeRestore": true,
+      "timeFrom": "now-24h",
+      "timeTo": "now",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": []}"
+      }
+    },
+    "references": [
+      {
+        "type": "search",
+        "id": "irina-nginx-access",
+        "name": "panel_0"
+      },
+      {
+        "type": "search",
+        "id": "irina-nginx-errors",
+        "name": "panel_1"
+      }
+    ],
+    "managed": false,
+    "coreMigrationVersion": "8.8.0",
+    "typeMigrationVersion": "10.3.0"
+  },
+  {
+    "id": "irina-nginx-access",
+    "type": "search",
+    "namespaces": [
+      "default"
+    ],
+    "migrationVersion": {
+      "search": "10.5.0"
+    },
+    "updated_at": "2026-10-24T09:07:20.254Z",
+    "created_at": "2026-10-24T09:07:20.254Z",
+    "version": "WzEyLDJd",
+    "attributes": {
+      "title": "Nginx access — both web servers",
+      "description": "Real Filebeat logs, grouped by source host using the host.name column.",
+      "columns": [
+        "host.name",
+        "log_type",
+        "message"
+      ],
+      "sort": [
+        [
+          "@timestamp",
+          "desc"
+        ]
+      ],
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"indexRefName\": \"kibanaSavedObjectMeta.searchSourceJSON.index\", \"query\": {\"query\": \"log_type: access\", \"language\": \"kuery\"}, \"filter\": []}"
+      }
+    },
+    "references": [
+      {
+        "id": "760a109e-bd56-4b75-81a9-8ebd447de2ef",
+        "type": "index-pattern",
+        "name": "kibanaSavedObjectMeta.searchSourceJSON.index"
+      }
+    ],
+    "managed": false,
+    "coreMigrationVersion": "8.8.0",
+    "typeMigrationVersion": "10.5.0"
+  },
+  {
+    "id": "irina-nginx-errors",
+    "type": "search",
+    "namespaces": [
+      "default"
+    ],
+    "migrationVersion": {
+      "search": "10.5.0"
+    },
+    "updated_at": "2026-10-24T09:07:21.108Z",
+    "created_at": "2026-10-24T09:07:21.108Z",
+    "version": "WzEzLDJd",
+    "attributes": {
+      "title": "Nginx errors — both web servers",
+      "description": "Real Filebeat logs, grouped by source host using the host.name column.",
+      "columns": [
+        "host.name",
+        "log_type",
+        "message"
+      ],
+      "sort": [
+        [
+          "@timestamp",
+          "desc"
+        ]
+      ],
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"indexRefName\": \"kibanaSavedObjectMeta.searchSourceJSON.index\", \"query\": {\"query\": \"log_type: error\", \"language\": \"kuery\"}, \"filter\": []}"
+      }
+    },
+    "references": [
+      {
+        "id": "760a109e-bd56-4b75-81a9-8ebd447de2ef",
+        "type": "index-pattern",
+        "name": "kibanaSavedObjectMeta.searchSourceJSON.index"
+      }
+    ],
+    "managed": false,
+    "coreMigrationVersion": "8.8.0",
+    "typeMigrationVersion": "10.5.0"
+  }
+]

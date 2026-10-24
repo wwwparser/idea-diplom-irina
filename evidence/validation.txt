@@ -1,0 +1,53 @@
+Actual validation, UTC 2026-10-24T09:18:02.420408+00:00
+
+terraform fmt -check [exit 0]
+
+
+terraform validate [exit 0]
+Success! The configuration is valid.
+
+
+
+Full Ansible repeat [exit 0]
+PLAY RECAP *********************************************************************
+irina-bastion.ru-central1.internal : ok=15   changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+irina-elasticsearch.ru-central1.internal : ok=29   changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0
+irina-kibana.ru-central1.internal : ok=35   changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0
+irina-web-a.ru-central1.internal : ok=25   changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+irina-web-b.ru-central1.internal : ok=25   changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+irina-zabbix.ru-central1.internal : ok=47   changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+
+
+
+Terraform final refresh plan [exit 0]
+data.yandex_vpc_network.existing: Reading...
+yandex_vpc_gateway.nat: Refreshing state... [id=enpkq1um8np0nns8o1ki]
+yandex_alb_http_router.web: Refreshing state... [id=ds7vi48f5chglfq855g3]
+data.yandex_vpc_network.existing: Read complete after 0s [id=enpqri1ec01qd9agt1v3]
+yandex_vpc_route_table.private: Refreshing state... [id=enp88mtminogrubfj141]
+yandex_vpc_subnet.public["d"]: Refreshing state... [id=fl8sg6cvmgp8phed79do]
+yandex_vpc_subnet.public["e"]: Refreshing state... [id=ajcsicg7no9k3ijm12gs]
+yandex_vpc_security_group.bastion: Refreshing state... [id=enp23b58n5ddvamm4bfc]
+yandex_vpc_security_group.alb: Refreshing state... [id=enp6a9onnp9ndrfccqr3]
+yandex_vpc_subnet.private["d"]: Refreshing state... [id=fl81f0v3avbm4h175j8n]
+yandex_vpc_subnet.private["e"]: Refreshing state... [id=ajc1p0ekjdps1qjinunc]
+yandex_vpc_security_group.ui: Refreshing state... [id=enpvo745mqfbs78g484p]
+yandex_alb_load_balancer.web: Refreshing state... [id=ds7n1dornnfbqv7tr712]
+yandex_vpc_security_group.web: Refreshing state... [id=enp970at39tdkm9r4dqb]
+yandex_vpc_security_group.elastic: Refreshing state... [id=enprk0fa8bkm65ofcb6e]
+yandex_compute_instance.vm["zabbix"]: Refreshing state... [id=fv4eg7bk6j2p97hfmusf]
+yandex_compute_instance.vm["bastion"]: Refreshing state... [id=bg03hv148csb1isvh14v]
+yandex_compute_instance.vm["web-a"]: Refreshing state... [id=bg0qibjjn9po6c8v8p96]
+yandex_compute_instance.vm["web-b"]: Refreshing state... [id=fv4gfbkil8iflpqim86p]
+yandex_compute_instance.vm["kibana"]: Refreshing state... [id=bg0fn7hmn33scoedfos9]
+yandex_compute_instance.vm["elasticsearch"]: Refreshing state... [id=fv40tftoe8eqebr2bhf2]
+yandex_alb_target_group.web: Refreshing state... [id=ds7nbc1cm0vp2sgv2kjj]
+yandex_compute_snapshot_schedule.daily: Refreshing state... [id=fd8caaap3o838q4b1oua]
+yandex_alb_backend_group.web: Refreshing state... [id=ds7e9fh272dlktjg7hnu]
+yandex_alb_virtual_host.web: Refreshing state... [id=ds7vi48f5chglfq855g3/irina-host]
+
+No changes. Your infrastructure matches the configuration.
+
+Terraform has compared your real infrastructure against your configuration
+and found no differences, so no changes are needed.
+Terraform exit: 0; log: C:\Users\Yuri\PycharmProjects\PythonProject\idea-diplom-irina\.local\terraform-plan-20261024T091214Z.log

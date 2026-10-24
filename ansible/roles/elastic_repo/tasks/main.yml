@@ -1,0 +1,19 @@
+---
+- name: Install Elastic signing key
+  ansible.builtin.get_url:
+    url: https://artifacts.elastic.co/GPG-KEY-elasticsearch
+    dest: /usr/share/keyrings/elastic.asc
+    mode: '0644'
+
+- name: Add signed Elastic 8.x repository
+  ansible.builtin.copy:
+    dest: /etc/apt/sources.list.d/elastic.list
+    content: "deb [signed-by=/usr/share/keyrings/elastic.asc] {{ elastic_apt_baseurl }} stable main\n"
+    mode: '0644'
+  register: elastic_source
+
+- name: Refresh signed Elastic package metadata after repository change
+  ansible.builtin.apt:
+    update_cache: true
+    lock_timeout: 300
+  when: elastic_source.changed

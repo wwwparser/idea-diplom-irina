@@ -1,0 +1,254 @@
+{
+  "checked_at": "2026-10-24T09:18:00.658809+00:00",
+  "machines": {
+    "bastion": {
+      "id": "bg03hv148csb1isvh14v",
+      "name": "irina-bastion",
+      "status": "RUNNING",
+      "zoneId": "ru-central1-e",
+      "resources": {
+        "memory": "2147483648",
+        "cores": "2",
+        "coreFraction": "20"
+      },
+      "schedulingPolicy": {
+        "preemptible": false
+      },
+      "networkInterfaces": [
+        {
+          "index": "0",
+          "macAddress": "d0:0d:38:fc:24:43",
+          "subnetId": "ajcsicg7no9k3ijm12gs",
+          "primaryV4Address": {
+            "address": "10.20.1.26",
+            "oneToOneNat": {
+              "address": "153.51.114.59",
+              "ipVersion": "IPV4"
+            }
+          },
+          "securityGroupIds": [
+            "enp23b58n5ddvamm4bfc"
+          ]
+        }
+      ],
+      "disk": {
+        "id": "bg0flbnsfq4iv460i9so",
+        "typeId": "network-hdd",
+        "size": "10737418240",
+        "status": "READY",
+        "sourceImageId": "fd8iej0ml2kuiu1tq40u"
+      }
+    },
+    "elasticsearch": {
+      "id": "fv40tftoe8eqebr2bhf2",
+      "name": "irina-elasticsearch",
+      "status": "RUNNING",
+      "zoneId": "ru-central1-d",
+      "resources": {
+        "memory": "4294967296",
+        "cores": "2",
+        "coreFraction": "20"
+      },
+      "schedulingPolicy": {
+        "preemptible": false
+      },
+      "networkInterfaces": [
+        {
+          "index": "0",
+          "macAddress": "d0:0d:eb:fb:87:21",
+          "subnetId": "fl81f0v3avbm4h175j8n",
+          "primaryV4Address": {
+            "address": "10.20.12.17"
+          },
+          "securityGroupIds": [
+            "enprk0fa8bkm65ofcb6e"
+          ]
+        }
+      ],
+      "disk": {
+        "id": "fv4fgu8hme45on9iclau",
+        "typeId": "network-ssd",
+        "size": "21474836480",
+        "status": "READY",
+        "sourceImageId": "fd8iej0ml2kuiu1tq40u"
+      }
+    },
+    "kibana": {
+      "id": "bg0fn7hmn33scoedfos9",
+      "name": "irina-kibana",
+      "status": "RUNNING",
+      "zoneId": "ru-central1-e",
+      "resources": {
+        "memory": "4294967296",
+        "cores": "2",
+        "coreFraction": "20"
+      },
+      "schedulingPolicy": {
+        "preemptible": false
+      },
+      "networkInterfaces": [
+        {
+          "index": "0",
+          "macAddress": "d0:0d:fb:9e:36:b8",
+          "subnetId": "ajcsicg7no9k3ijm12gs",
+          "primaryV4Address": {
+            "address": "10.20.1.19",
+            "oneToOneNat": {
+              "address": "153.51.118.76",
+              "ipVersion": "IPV4"
+            }
+          },
+          "securityGroupIds": [
+            "enpvo745mqfbs78g484p"
+          ]
+        }
+      ],
+      "disk": {
+        "id": "bg0su4h10q8p9pgdspk5",
+        "typeId": "network-hdd",
+        "size": "10737418240",
+        "status": "READY",
+        "sourceImageId": "fd8iej0ml2kuiu1tq40u"
+      }
+    },
+    "web-a": {
+      "id": "bg0qibjjn9po6c8v8p96",
+      "name": "irina-web-a",
+      "status": "RUNNING",
+      "zoneId": "ru-central1-e",
+      "resources": {
+        "memory": "2147483648",
+        "cores": "2",
+        "coreFraction": "20"
+      },
+      "schedulingPolicy": {
+        "preemptible": false
+      },
+      "networkInterfaces": [
+        {
+          "index": "0",
+          "macAddress": "d0:0d:1a:92:e7:3b",
+          "subnetId": "ajc1p0ekjdps1qjinunc",
+          "primaryV4Address": {
+            "address": "10.20.11.17"
+          },
+          "securityGroupIds": [
+            "enp970at39tdkm9r4dqb"
+          ]
+        }
+      ],
+      "disk": {
+        "id": "bg0u7pnuuq44nr05lj9r",
+        "typeId": "network-ssd",
+        "size": "10737418240",
+        "status": "READY",
+        "sourceImageId": "fd8iej0ml2kuiu1tq40u"
+      }
+    },
+    "web-b": {
+      "id": "fv4gfbkil8iflpqim86p",
+      "name": "irina-web-b",
+      "status": "RUNNING",
+      "zoneId": "ru-central1-d",
+      "resources": {
+        "memory": "2147483648",
+        "cores": "2",
+        "coreFraction": "20"
+      },
+      "schedulingPolicy": {
+        "preemptible": false
+      },
+      "networkInterfaces": [
+        {
+          "index": "0",
+          "macAddress": "d0:0d:10:7a:e9:2a",
+          "subnetId": "fl81f0v3avbm4h175j8n",
+          "primaryV4Address": {
+            "address": "10.20.12.18"
+          },
+          "securityGroupIds": [
+            "enp970at39tdkm9r4dqb"
+          ]
+        }
+      ],
+      "disk": {
+        "id": "fv4iki9u3ne3ho4qtnnb",
+        "typeId": "network-ssd",
+        "size": "10737418240",
+        "status": "READY",
+        "sourceImageId": "fd8iej0ml2kuiu1tq40u"
+      }
+    },
+    "zabbix": {
+      "id": "fv4eg7bk6j2p97hfmusf",
+      "name": "irina-zabbix",
+      "status": "RUNNING",
+      "zoneId": "ru-central1-d",
+      "resources": {
+        "memory": "4294967296",
+        "cores": "2",
+        "coreFraction": "20"
+      },
+      "schedulingPolicy": {
+        "preemptible": false
+      },
+      "networkInterfaces": [
+        {
+          "index": "0",
+          "macAddress": "d0:0d:e8:1d:74:34",
+          "subnetId": "fl8sg6cvmgp8phed79do",
+          "primaryV4Address": {
+            "address": "10.20.2.26",
+            "oneToOneNat": {
+              "address": "158.160.239.100",
+              "ipVersion": "IPV4"
+            }
+          },
+          "securityGroupIds": [
+            "enpvo745mqfbs78g484p"
+          ]
+        }
+      ],
+      "disk": {
+        "id": "fv46r9g34bn60m370kf2",
+        "typeId": "network-ssd",
+        "size": "21474836480",
+        "status": "READY",
+        "sourceImageId": "fd8iej0ml2kuiu1tq40u"
+      }
+    }
+  },
+  "old_machines": [
+    {
+      "id": "epdtekvqfjq1pujg55au",
+      "name": "web-2",
+      "status": "STOPPED"
+    },
+    {
+      "id": "fhm4878ge0irddqchgkq",
+      "name": "kibana",
+      "status": "STOPPED"
+    },
+    {
+      "id": "fhm5h3jusalgq0bqmlo6",
+      "name": "web-1",
+      "status": "STOPPED"
+    },
+    {
+      "id": "fhm9147min51ej6jg1rg",
+      "name": "bastion",
+      "status": "STOPPED"
+    },
+    {
+      "id": "fhmeqkds7c6lirmvde55",
+      "name": "zabbix",
+      "status": "STOPPED"
+    },
+    {
+      "id": "fhmobbsqtgpftb5b06s2",
+      "name": "elasticsearch",
+      "status": "STOPPED"
+    }
+  ],
+  "temporary_restore_disk_absent": true
+}

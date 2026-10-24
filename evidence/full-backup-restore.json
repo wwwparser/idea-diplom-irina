@@ -1,0 +1,62 @@
+{
+  "checked_at": "2026-10-24T09:12:03.941489+00:00",
+  "postgresql": {
+    "dump": "/var/backups/zabbix/zabbix-20261024T091205Z.dump",
+    "bytes": 4970173,
+    "restore_ok": true,
+    "managed_hosts_restored": 6,
+    "temporary_database_removed": true
+  },
+  "snapshots": [
+    {
+      "id": "fd80paicvggithl6hjic",
+      "name": "irina-kibana_bg0su4h10q8p9pgdspk5_202610240906_brui",
+      "sourceDiskId": "bg0su4h10q8p9pgdspk5",
+      "createdAt": "2026-10-24T09:06:03Z",
+      "status": "READY"
+    },
+    {
+      "id": "fd853ff3i5ffq0e3jadj",
+      "name": "irina-zabbix_fv46r9g34bn60m370kf2_202610240906_4tlr",
+      "sourceDiskId": "fv46r9g34bn60m370kf2",
+      "createdAt": "2026-10-24T09:06:05Z",
+      "status": "READY"
+    },
+    {
+      "id": "fd894ggehtg4c51dhphv",
+      "name": "irina-bastion_bg0flbnsfq4iv460i9so_202610240906_ro3v",
+      "sourceDiskId": "bg0flbnsfq4iv460i9so",
+      "createdAt": "2026-10-24T09:06:02Z",
+      "status": "READY"
+    },
+    {
+      "id": "fd8dt3ul8ltcsmvobnfc",
+      "name": "irina-web-b_fv4iki9u3ne3ho4qtnnb_202610240906_h41b",
+      "sourceDiskId": "fv4iki9u3ne3ho4qtnnb",
+      "createdAt": "2026-10-24T09:06:04Z",
+      "status": "READY"
+    },
+    {
+      "id": "fd8fhe1380grfpluerlg",
+      "name": "irina-elasticsearch_fv4fgu8hme45on9iclau_202610240906_qd0t",
+      "sourceDiskId": "fv4fgu8hme45on9iclau",
+      "createdAt": "2026-10-24T09:06:05Z",
+      "status": "READY"
+    },
+    {
+      "id": "fd8i9fgikgg567p3g0h0",
+      "name": "irina-web-a_bg0u7pnuuq44nr05lj9r_202610240906_db31",
+      "sourceDiskId": "bg0u7pnuuq44nr05lj9r",
+      "createdAt": "2026-10-24T09:06:04Z",
+      "status": "READY"
+    }
+  ],
+  "web_disk_restore": {
+    "snapshot_id": "fd8i9fgikgg567p3g0h0",
+    "temporary_disk_id": "fv4mpl17me50eeqg5bbd",
+    "snapshot_filesystem": "/dev/vdb1",
+    "mount_options": "ro,noload",
+    "site_sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+  },
+  "temporary_disk_removed": true
+}

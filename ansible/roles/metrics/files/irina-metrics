@@ -1,0 +1,100 @@
+#!/usr/bin/python3
+"""Guest USE metrics. Run by a root-owned timer; agent reads JSON only."""
+import json, os, re, subprocess, time
+from pathlib import Path
+from urllib.request import urlopen
+
+BASE = Path('/var/lib/irina-metrics')
+BASE.mkdir(mode=0o755, exist_ok=True)
+now = time.time()
+try:
+    previous = json.loads((BASE / 'counters.json').read_text())
+except (OSError, ValueError):
+    previous = {}
+elapsed = max(now - previous.get('time', now - 15), 1)
+counters = {'time': now}
+metrics = {'timestamp': int(now)}
+
+def rate(key, value):
+    counters[key] = value
+    return max(value - previous.get(key, value), 0) / elapsed
+
+stat = Path('/proc/stat').read_text().splitlines()
+cpu = [int(x) for x in stat[0].split()[1:9]]
+total, idle = sum(cpu), cpu[3] + cpu[4]
+delta_total, delta_idle = rate('cpu_total', total), rate('cpu_idle', idle)
+metrics['cpu_util'] = round(100 * (1 - delta_idle / delta_total), 2) if delta_total else 0
+metrics['cpu_load_per_core'] = os.getloadavg()[0] / (os.cpu_count() or 1)
+metrics['cpu_queue'] = next(int(x.split()[1]) for x in stat if x.startswith('procs_running '))
+mem = {k: int(v.split()[0]) * 1024 for k, v in (x.split(':') for x in Path('/proc/meminfo').read_text().splitlines())}
+metrics['ram_used_pct'] = 100 * (1 - mem['MemAvailable'] / mem['MemTotal'])
+metrics['ram_available_bytes'] = mem['MemAvailable']
+vm = dict(x.split() for x in Path('/proc/vmstat').read_text().splitlines())
+metrics['swap_pages_per_second'] = rate('swap_in', int(vm['pswpin'])) + rate('swap_out', int(vm['pswpout']))
+metrics['oom_kills_per_second'] = rate('oom_kill', int(vm.get('oom_kill', 0)))
+for resource in ('cpu', 'memory', 'io'):
+    path = Path('/proc/pressure') / resource
+    if path.exists():
+        metrics[resource + '_psi_pct'] = float(re.search(r'avg10=([\d.]+)', path.read_text()).group(1))
+fs = os.statvfs('/')
+metrics['disk_used_pct'] = 100 * (1 - fs.f_bavail / fs.f_blocks)
+utils, awaits, queues = [], [], []
+for line in Path('/proc/diskstats').read_text().splitlines():
+    fields = line.split()
+    device = fields[2]
+    if not (Path('/sys/block') / device).exists() or device.startswith(('loop', 'ram', 'sr', 'dm-')):
+        continue
+    reads, read_ms, writes, write_ms, inflight, busy_ms = [int(fields[i]) for i in (3, 6, 7, 10, 11, 12)]
+    ios = rate(device + '_ios', reads + writes)
+    wait = rate(device + '_wait', read_ms + write_ms)
+    utils.append(min(rate(device + '_busy', busy_ms) / 10, 100))
+    awaits.append(wait / ios if ios else 0)
+    queues.append(inflight)
+metrics.update(disk_util_pct=max(utils, default=0), disk_await_ms=max(awaits, default=0), disk_queue=sum(queues))
+network = dict(rx=0, tx=0, errors=0, drops=0)
+for line in Path('/proc/net/dev').read_text().splitlines()[2:]:
+    name, values = line.split(':')
+    if name.strip() == 'lo':
+        continue
+    values = [int(x) for x in values.split()]
+    for key, value in [('rx', values[0]), ('tx', values[8]), ('errors', values[2]+values[10]), ('drops', values[3]+values[11])]:
+        network[key] += value
+for key, value in network.items():
+    metrics['net_' + key + '_per_second'] = rate('net_' + key, value)
+# Only errors visible inside the guest kernel; this is not host hardware telemetry.
+journal = subprocess.run(['journalctl', '-k', '--since=-60seconds', '--no-pager', '-o', 'cat'], capture_output=True, text=True, timeout=5)
+if journal.returncode == 0:
+    metrics['disk_io_errors_60s'] = sum(bool(re.search(r'I/O error|Buffer I/O|blk_update_request.*error', line, re.I)) for line in journal.stdout.splitlines())
+    metrics['kernel_errors_60s'] = sum(bool(re.search(r'BUG:|kernel panic|soft lockup|watchdog.*lockup', line, re.I)) for line in journal.stdout.splitlines())
+if Path('/var/log/nginx/metrics.log').exists():
+    with urlopen('http://127.0.0.1/nginx_status', timeout=3) as response:
+        status = response.read().decode()
+    lines = status.splitlines()
+    metrics['http_active'] = int(lines[0].split(':')[1])
+    metrics['http_rps'] = rate('http_requests', int(lines[2].split()[2]))
+    metrics['http_waiting'] = int(re.search(r'Waiting: (\d+)', status).group(1))
+    access = Path('/var/log/nginx/metrics.log')
+    with access.open('rb') as stream:
+        length = os.fstat(stream.fileno()).st_size
+        stream.seek(max(length - 2_000_000, 0))
+        if length > 2_000_000:
+            stream.readline()
+        records = stream.read().decode(errors='replace').splitlines()
+    events = []
+    for record in records:
+        try:
+            event = json.loads(record)
+            if now - 60 <= float(event['time']) <= now:
+                events.append(event)
+        except (ValueError, KeyError):
+            continue
+    metrics['http_sample_truncated'] = int(length > 2_000_000 and bool(events) and float(events[0]['time']) > now-60)
+    metrics['http_requests_60s'] = len(events)
+    metrics['http_5xx_pct'] = 100 * sum(int(e['status']) >= 500 for e in events) / len(events) if events else 0
+    metrics['http_latency_seconds'] = sum(float(e['duration']) for e in events) / len(events) if events else 0
+for name, data, mode in [('counters.json', counters, 0o600), ('metrics.json', metrics, 0o644)]:
+    target = BASE / name
+    temporary = BASE / (name + '.tmp')
+    temporary.write_text(json.dumps(data) + '\n')
+    temporary.chmod(mode)
+    os.replace(temporary, target)

@@ -1,0 +1,97 @@
+{
+  "checked_at": "2026-10-24T08:29:50.749662+00:00",
+  "folders": {
+    "b1gj512d2ohptmg6691o": [
+      {
+        "id": "bg0qmnurn7m5n1pivbgk",
+        "name": "irina-debug-web",
+        "zoneId": "ru-central1-e",
+        "status": "RUNNING",
+        "resources": {
+          "memory": "2147483648",
+          "cores": "2",
+          "coreFraction": "20"
+        }
+      },
+      {
+        "id": "fv4uagd5ulsrv6s9t0lp",
+        "name": "irina-debug-control",
+        "zoneId": "ru-central1-d",
+        "status": "RUNNING",
+        "resources": {
+          "memory": "8589934592",
+          "cores": "2",
+          "coreFraction": "20"
+        }
+      }
+    ],
+    "b1g1govctvfjit4rce7g": [
+      {
+        "id": "epdtekvqfjq1pujg55au",
+        "name": "web-2",
+        "zoneId": "ru-central1-b",
+        "status": "STOPPED",
+        "resources": {
+          "memory": "2147483648",
+          "cores": "2",
+          "coreFraction": "20"
+        }
+      },
+      {
+        "id": "fhm4878ge0irddqchgkq",
+        "name": "kibana",
+        "zoneId": "ru-central1-a",
+        "status": "STOPPED",
+        "resources": {
+          "memory": "2147483648",
+          "cores": "2",
+          "coreFraction": "20"
+        }
+      },
+      {
+        "id": "fhm5h3jusalgq0bqmlo6",
+        "name": "web-1",
+        "zoneId": "ru-central1-a",
+        "status": "STOPPED",
+        "resources": {
+          "memory": "2147483648",
+          "cores": "2",
+          "coreFraction": "20"
+        }
+      },
+      {
+        "id": "fhm9147min51ej6jg1rg",
+        "name": "bastion",
+        "zoneId": "ru-central1-a",
+        "status": "STOPPED",
+        "resources": {
+          "memory": "2147483648",
+          "cores": "2",
+          "coreFraction": "20"
+        }
+      },
+      {
+        "id": "fhmeqkds7c6lirmvde55",
+        "name": "zabbix",
+        "zoneId": "ru-central1-a",
+        "status": "STOPPED",
+        "resources": {
+          "memory": "4294967296",
+          "cores": "2",
+          "coreFraction": "20"
+        }
+      },
+      {
+        "id": "fhmobbsqtgpftb5b06s2",
+        "name": "elasticsearch",
+        "zoneId": "ru-central1-a",
+        "status": "STOPPED",
+        "resources": {
+          "memory": "4294967296",
+          "cores": "2",
+          "coreFraction": "20"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,116 @@
+---
+- name: Validate passwords
+  ansible.builtin.assert:
+    that:
+      - item is match('^[A-Za-z0-9]{32,}$')
+      - "'REPLACE' not in item"
+  loop: "{{ [elastic_password, kibana_system_password, filebeat_password] }}"
+  no_log: true
+
+- name: Install pinned Elasticsearch package
+  ansible.builtin.apt:
+    name: "elasticsearch={{ elastic_version }}"
+    state: present
+
+- name: Set mmap limit required by Elasticsearch
+  ansible.posix.sysctl:
+    name: vm.max_map_count
+    value: '262144'
+    state: present
+    reload: true
+
+- name: Configure Elasticsearch
+  ansible.builtin.template:
+    src: elasticsearch.yml.j2
+    dest: /etc/elasticsearch/elasticsearch.yml
+    owner: root
+    group: elasticsearch
+    mode: '0640'
+  notify: Restart Elasticsearch
+
+- name: Limit Java heap for four gigabytes of RAM
+  ansible.builtin.copy:
+    dest: /etc/elasticsearch/jvm.options.d/heap.options
+    content: "-Xms1g\n-Xmx1g\n"
+    mode: '0644'
+  notify: Restart Elasticsearch
+
+- name: List Elasticsearch keystore keys
+  ansible.builtin.command: /usr/share/elasticsearch/bin/elasticsearch-keystore list
+  register: keystore_keys
+  changed_when: false
+
+- name: Set initial bootstrap password
+  ansible.builtin.command:
+    argv: [/usr/share/elasticsearch/bin/elasticsearch-keystore, add, -x, bootstrap.password]
+    stdin: "{{ elastic_password }}"
+  when: "'bootstrap.password' not in keystore_keys.stdout_lines"
+  no_log: true
+  notify: Restart Elasticsearch
+
+- name: Enable Elasticsearch
+  ansible.builtin.systemd_service:
+    name: elasticsearch
+    enabled: true
+    state: started
+
+- name: Apply configuration before API requests
+  ansible.builtin.meta: flush_handlers
+
+- name: Wait for authenticated Elasticsearch API
+  ansible.builtin.uri:
+    url: http://127.0.0.1:9200/_cluster/health
+    url_username: elastic
+    url_password: "{{ elastic_password }}"
+    force_basic_auth: true
+    timeout: 10
+  register: es_health
+  until: es_health.status == 200
+  retries: 30
+  delay: 5
+  no_log: true
+
+- name: Set built-in user passwords
+  ansible.builtin.uri:
+    url: "http://127.0.0.1:9200/_security/user/{{ item.user }}/_password"
+    method: POST
+    url_username: elastic
+    url_password: "{{ elastic_password }}"
+    force_basic_auth: true
+    body_format: json
+    body: {password: "{{ item.password }}"}
+    timeout: 15
+  loop:
+    - {user: elastic, password: "{{ elastic_password }}"}
+    - {user: kibana_system, password: "{{ kibana_system_password }}"}
+  no_log: true
+
+- name: Create restricted Filebeat writer role
+  ansible.builtin.uri:
+    url: http://127.0.0.1:9200/_security/role/nginx_writer
+    method: PUT
+    url_username: elastic
+    url_password: "{{ elastic_password }}"
+    force_basic_auth: true
+    body_format: json
+    body:
+      cluster: [monitor]
+      indices:
+        - names: ['nginx-*']
+          privileges: [auto_configure, create_doc]
+    timeout: 15
+  no_log: true
+
+- name: Create Filebeat user
+  ansible.builtin.uri:
+    url: http://127.0.0.1:9200/_security/user/filebeat_writer
+    method: PUT
+    url_username: elastic
+    url_password: "{{ elastic_password }}"
+    force_basic_auth: true
+    body_format: json
+    body:
+      password: "{{ filebeat_password }}"
+      roles: [nginx_writer]
+    timeout: 15
+  no_log: true

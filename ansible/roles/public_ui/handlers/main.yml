@@ -1,0 +1,10 @@
+---
+- name: Validate UI nginx config
+  ansible.builtin.command: nginx -t
+  changed_when: false
+  listen: Reload UI nginx
+- name: Reload UI nginx service
+  ansible.builtin.systemd_service:
+    name: nginx
+    state: reloaded
+  listen: Reload UI nginx

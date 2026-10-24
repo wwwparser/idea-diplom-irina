@@ -1,0 +1,22 @@
+---
+- name: Verify supported operating system
+  ansible.builtin.assert:
+    that:
+      - ansible_distribution == 'Ubuntu'
+      - ansible_distribution_version == '22.04'
+    fail_msg: This prototype targets Ubuntu 22.04 LTS.
+
+- name: Wait for initial cloud-init package installation
+  ansible.builtin.command: cloud-init status --wait
+  changed_when: false
+
+- name: Install basic administration tools
+  ansible.builtin.apt:
+    name: [ca-certificates, curl, gnupg, logrotate, acl]
+    update_cache: true
+    cache_valid_time: 3600
+    lock_timeout: 300
+
+- name: Set UTC timezone
+  community.general.timezone:
+    name: Etc/UTC

@@ -1,0 +1,29 @@
+---
+- name: Install Zabbix repository signing key
+  ansible.builtin.get_url:
+    url: https://repo.zabbix.com/zabbix-official-repo.key
+    dest: /etc/apt/trusted.gpg.d/zabbix.asc
+    mode: '0644'
+
+- name: Add signed Zabbix 7.0 LTS repository
+  ansible.builtin.apt_repository:
+    repo: deb [signed-by=/etc/apt/trusted.gpg.d/zabbix.asc] https://repo.zabbix.com/zabbix/7.0/ubuntu jammy main
+    filename: zabbix
+
+- name: Install native agent
+  ansible.builtin.apt:
+    name: zabbix-agent
+    state: present
+
+- name: Configure active agent without inbound listener
+  ansible.builtin.template:
+    src: agent.conf.j2
+    dest: /etc/zabbix/zabbix_agentd.conf
+    mode: '0644'
+  notify: Restart agent
+
+- name: Enable native agent
+  ansible.builtin.systemd_service:
+    name: zabbix-agent
+    enabled: true
+    state: started

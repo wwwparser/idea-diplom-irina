@@ -1,0 +1,45 @@
+---
+- name: Baseline and host monitoring
+  module_defaults: &apt_defaults
+    ansible.builtin.apt:
+      lock_timeout: 600
+  hosts: all
+  become: true
+  roles:
+    - common
+    - agent
+    - metrics
+
+- name: Native Zabbix and PostgreSQL
+  module_defaults: *apt_defaults
+  hosts: monitoring
+  become: true
+  vars_files: ["{{ secrets_file | default('vars/secrets.yml') }}"]
+  roles: [monitoring]
+
+- name: Native Elasticsearch
+  module_defaults: *apt_defaults
+  hosts: elasticsearch
+  become: true
+  vars_files: ["{{ secrets_file | default('vars/secrets.yml') }}"]
+  roles: [elastic_repo, elasticsearch]
+
+- name: Identical nginx website and log shipping
+  module_defaults: *apt_defaults
+  hosts: web
+  become: true
+  vars_files: ["{{ secrets_file | default('vars/secrets.yml') }}"]
+  roles: [web, elastic_repo, filebeat]
+
+- name: Native Kibana
+  module_defaults: *apt_defaults
+  hosts: kibana
+  become: true
+  vars_files: ["{{ secrets_file | default('vars/secrets.yml') }}"]
+  roles: [elastic_repo, kibana]
+
+- name: Narrow shared cloud UI security group on each host
+  module_defaults: *apt_defaults
+  hosts: monitoring:kibana
+  become: true
+  roles: [public_ui, firewall]

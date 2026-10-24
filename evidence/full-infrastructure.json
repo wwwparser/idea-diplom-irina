@@ -1,0 +1,554 @@
+{
+  "checked_at": "2026-10-24T09:05:47.593587+00:00",
+  "site_url": "http://51.250.2.128",
+  "machines": {
+    "bastion": {
+      "id": "bg03hv148csb1isvh14v",
+      "zone": "ru-central1-e",
+      "status": "RUNNING",
+      "preemptible": false,
+      "private_ip": "10.20.1.26",
+      "public_ip": "153.51.114.59",
+      "services": {
+        "zabbix-agent": "active",
+        "irina-metrics.timer": "active"
+      },
+      "metrics": {
+        "timestamp": 1792832738,
+        "cpu_util": 5.79,
+        "cpu_load_per_core": 0.15478515625,
+        "cpu_queue": 1,
+        "ram_used_pct": 16.017546932471383,
+        "ram_available_bytes": 1728299008,
+        "swap_pages_per_second": 0.0,
+        "oom_kills_per_second": 0.0,
+        "cpu_psi_pct": 0.76,
+        "memory_psi_pct": 0.0,
+        "io_psi_pct": 3.73,
+        "disk_used_pct": 20.361199747964864,
+        "disk_util_pct": 7.550011025385269,
+        "disk_await_ms": 1.7413997627520759,
+        "disk_queue": 0,
+        "net_rx_per_second": 58488.835412053326,
+        "net_tx_per_second": 58599.96057433093,
+        "net_errors_per_second": 0.0,
+        "net_drops_per_second": 0.0,
+        "disk_io_errors_60s": 0,
+        "kernel_errors_60s": 0
+      }
+    },
+    "elasticsearch": {
+      "id": "fv40tftoe8eqebr2bhf2",
+      "zone": "ru-central1-d",
+      "status": "RUNNING",
+      "preemptible": false,
+      "private_ip": "10.20.12.17",
+      "public_ip": "",
+      "services": {
+        "zabbix-agent": "active",
+        "irina-metrics.timer": "active",
+        "elasticsearch": "active"
+      },
+      "metrics": {
+        "timestamp": 1792832745,
+        "cpu_util": 3.76,
+        "cpu_load_per_core": 0.2041015625,
+        "cpu_queue": 1,
+        "ram_used_pct": 46.26418584581701,
+        "ram_available_bytes": 2203602944,
+        "swap_pages_per_second": 0.0,
+        "oom_kills_per_second": 0.0,
+        "cpu_psi_pct": 0.1,
+        "memory_psi_pct": 0.0,
+        "io_psi_pct": 2.08,
+        "disk_used_pct": 19.805612613067535,
+        "disk_util_pct": 6.9947024166242375,
+        "disk_await_ms": 1.8222222222222224,
+        "disk_queue": 0,
+        "net_rx_per_second": 1235.5164617893804,
+        "net_tx_per_second": 937.2129763745232,
+        "net_errors_per_second": 0.0,
+        "net_drops_per_second": 0.0,
+        "disk_io_errors_60s": 0,
+        "kernel_errors_60s": 0
+      }
+    },
+    "kibana": {
+      "id": "bg0fn7hmn33scoedfos9",
+      "zone": "ru-central1-e",
+      "status": "RUNNING",
+      "preemptible": false,
+      "private_ip": "10.20.1.19",
+      "public_ip": "153.51.118.76",
+      "services": {
+        "zabbix-agent": "active",
+        "irina-metrics.timer": "active",
+        "kibana": "active"
+      },
+      "metrics": {
+        "timestamp": 1792832749,
+        "cpu_util": 27.62,
+        "cpu_load_per_core": 0.499267578125,
+        "cpu_queue": 2,
+        "ram_used_pct": 31.610289520103397,
+        "ram_available_bytes": 2804531200,
+        "swap_pages_per_second": 0.0,
+        "oom_kills_per_second": 0.0,
+        "cpu_psi_pct": 1.46,
+        "memory_psi_pct": 0.0,
+        "io_psi_pct": 55.08,
+        "disk_used_pct": 41.47517310545579,
+        "disk_util_pct": 95.38507041180615,
+        "disk_await_ms": 4.3544350386455655,
+        "disk_queue": 1,
+        "net_rx_per_second": 96145.61626693582,
+        "net_tx_per_second": 3340.145035574261,
+        "net_errors_per_second": 0.0,
+        "net_drops_per_second": 0.0,
+        "disk_io_errors_60s": 0,
+        "kernel_errors_60s": 0
+      }
+    },
+    "web-a": {
+      "id": "bg0qibjjn9po6c8v8p96",
+      "zone": "ru-central1-e",
+      "status": "RUNNING",
+      "preemptible": false,
+      "private_ip": "10.20.11.17",
+      "public_ip": "",
+      "services": {
+        "zabbix-agent": "active",
+        "irina-metrics.timer": "active",
+        "nginx": "active",
+        "filebeat": "active"
+      },
+      "metrics": {
+        "timestamp": 1792832741,
+        "cpu_util": 0.41,
+        "cpu_load_per_core": 0.09130859375,
+        "cpu_queue": 1,
+        "ram_used_pct": 16.51195006607965,
+        "ram_available_bytes": 1718124544,
+        "swap_pages_per_second": 0.0,
+        "oom_kills_per_second": 0.0,
+        "cpu_psi_pct": 0.0,
+        "memory_psi_pct": 0.0,
+        "io_psi_pct": 0.0,
+        "disk_used_pct": 24.241849134873384,
+        "disk_util_pct": 0.6886746564318179,
+        "disk_await_ms": 2.3529411764705883,
+        "disk_queue": 0,
+        "net_rx_per_second": 561.1423126481479,
+        "net_tx_per_second": 1865.7344233832,
+        "net_errors_per_second": 0.0,
+        "net_drops_per_second": 0.0,
+        "disk_io_errors_60s": 0,
+        "kernel_errors_60s": 0,
+        "http_active": 5,
+        "http_rps": 0.8927264064856899,
+        "http_waiting": 4,
+        "http_sample_truncated": 0,
+        "http_requests_60s": 48,
+        "http_5xx_pct": 0.0,
+        "http_latency_seconds": 0.0
+      },
+      "site_sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+    },
+    "web-b": {
+      "id": "fv4gfbkil8iflpqim86p",
+      "zone": "ru-central1-d",
+      "status": "RUNNING",
+      "preemptible": false,
+      "private_ip": "10.20.12.18",
+      "public_ip": "",
+      "services": {
+        "zabbix-agent": "active",
+        "irina-metrics.timer": "active",
+        "nginx": "active",
+        "filebeat": "active"
+      },
+      "metrics": {
+        "timestamp": 1792832745,
+        "cpu_util": 0.38,
+        "cpu_load_per_core": 0.1318359375,
+        "cpu_queue": 1,
+        "ram_used_pct": 16.798560578316323,
+        "ram_available_bytes": 1712226304,
+        "swap_pages_per_second": 0.0,
+        "oom_kills_per_second": 0.0,
+        "cpu_psi_pct": 0.0,
+        "memory_psi_pct": 0.0,
+        "io_psi_pct": 0.0,
+        "disk_used_pct": 24.025620197899876,
+        "disk_util_pct": 0.37562685576763727,
+        "disk_await_ms": 2.7499999999999996,
+        "disk_queue": 0,
+        "net_rx_per_second": 599.1248349493815,
+        "net_tx_per_second": 2492.221583542312,
+        "net_errors_per_second": 0.0,
+        "net_drops_per_second": 0.0,
+        "disk_io_errors_60s": 0,
+        "kernel_errors_60s": 0,
+        "http_active": 5,
+        "http_rps": 0.9390671394190931,
+        "http_waiting": 4,
+        "http_sample_truncated": 0,
+        "http_requests_60s": 49,
+        "http_5xx_pct": 0.0,
+        "http_latency_seconds": 0.0
+      },
+      "site_sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+    },
+    "zabbix": {
+      "id": "fv4eg7bk6j2p97hfmusf",
+      "zone": "ru-central1-d",
+      "status": "RUNNING",
+      "preemptible": false,
+      "private_ip": "10.20.2.26",
+      "public_ip": "158.160.239.100",
+      "services": {
+        "zabbix-agent": "active",
+        "irina-metrics.timer": "active",
+        "zabbix-server": "active",
+        "postgresql": "active",
+        "nginx": "active"
+      },
+      "metrics": {
+        "timestamp": 1792832740,
+        "cpu_util": 6.39,
+        "cpu_load_per_core": 0.24169921875,
+        "cpu_queue": 1,
+        "ram_used_pct": 15.68477039478613,
+        "ram_available_bytes": 3457609728,
+        "swap_pages_per_second": 0.0,
+        "oom_kills_per_second": 0.0,
+        "cpu_psi_pct": 0.0,
+        "memory_psi_pct": 0.0,
+        "io_psi_pct": 15.61,
+        "disk_used_pct": 12.887540865576486,
+        "disk_util_pct": 23.619725155518864,
+        "disk_await_ms": 8.356269113149848,
+        "disk_queue": 3,
+        "net_rx_per_second": 28838.93458234391,
+        "net_tx_per_second": 2287.3641773622317,
+        "net_errors_per_second": 0.0,
+        "net_drops_per_second": 0.0,
+        "disk_io_errors_60s": 0,
+        "kernel_errors_60s": 0
+      }
+    }
+  },
+  "http": {
+    "normal": [
+      {
+        "status": 200,
+        "backend": "irina-web-a",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-a",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-a",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-a",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-a",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-a",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-a",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-a",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-a",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-a",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      }
+    ],
+    "restricted_status": {
+      "irina-web-a.ru-central1.internal": 403,
+      "irina-web-b.ru-central1.internal": 403
+    },
+    "web_a_stopped": [
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      }
+    ],
+    "web_a_restarted": true,
+    "recovered": [
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-a",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-a",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-a",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-a",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-a",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-a",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-a",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-a",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-a",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-a",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-a",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      },
+      {
+        "status": 200,
+        "backend": "irina-web-b",
+        "sha256": "c95759f74dc50e392f484c3e49378ec9ce51c410403ff2caaf0423caef472f99"
+      }
+    ]
+  }
+}

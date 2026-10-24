@@ -1,0 +1,446 @@
+{
+  "checked_at": "2026-10-24T07:56:10.400640+00:00",
+  "requests": [
+    {
+      "id": "atdog4hqin2van0euh56",
+      "resource": {
+        "id": "b1gb7ghs6e3j9crn0t19",
+        "type": "resource-manager.cloud"
+      },
+      "created_at": "2026-10-24T07:11:33.467393Z",
+      "status": "PENDING",
+      "quota_limits": [
+        {
+          "quota_id": "compute.instanceCores.count.ru-central1-e",
+          "desired_limit": 10,
+          "status": "PROCESSING"
+        },
+        {
+          "quota_id": "compute.ssdDisks.size.ru-central1-e",
+          "desired_limit": 80530636800,
+          "status": "PROCESSING"
+        }
+      ],
+      "created_by": "ajecrvfdh06a5m67ndd4"
+    },
+    {
+      "id": "atd8n4v55vg9c2oqds28",
+      "resource": {
+        "id": "b1gb7ghs6e3j9crn0t19",
+        "type": "resource-manager.cloud"
+      },
+      "created_at": "2026-10-18T10:51:47.349823Z",
+      "status": "PROCESSED",
+      "quota_limits": [
+        {
+          "quota_id": "compute.ssdDisks.size.ru-central1-d",
+          "desired_limit": 80530636800,
+          "approved_limit": 80530636800,
+          "status": "APPROVED"
+        }
+      ],
+      "created_by": "ajecrvfdh06a5m67ndd4"
+    },
+    {
+      "id": "atd3lehsjsa1shk5v9p8",
+      "resource": {
+        "id": "b1gb7ghs6e3j9crn0t19",
+        "type": "resource-manager.cloud"
+      },
+      "created_at": "2026-10-18T10:51:28.601158Z",
+      "status": "PROCESSED",
+      "quota_limits": [
+        {
+          "quota_id": "compute.hddDisks.size.ru-central1-d",
+          "desired_limit": 80530636800,
+          "status": "REJECTED",
+          "message": "Запросите, пожалуйста, квоту на SSD диски в зоне D - compute.ssdDisks.size.ru-central1-d"
+        },
+        {
+          "quota_id": "compute.instanceCores.count.ru-central1-d",
+          "desired_limit": 10,
+          "status": "REJECTED",
+          "message": "Высокий спрос на ресурсы",
+          "modified_by": "ajegoob2dcrqjng91jl9"
+        }
+      ],
+      "created_by": "ajecrvfdh06a5m67ndd4"
+    },
+    {
+      "id": "atdck1pcjnqp8clqhkqr",
+      "resource": {
+        "id": "b1gb7ghs6e3j9crn0t19",
+        "type": "resource-manager.cloud"
+      },
+      "created_at": "2026-10-18T10:50:40.082104Z",
+      "status": "PENDING",
+      "quota_limits": [
+        {
+          "quota_id": "compute.instanceCores.count.ru-central1-b",
+          "desired_limit": 4,
+          "status": "REJECTED",
+          "message": "Пожалуйста, создайте новое обращение с запросом квоты в зоне доступности ru-central1-d"
+        },
+        {
+          "quota_id": "compute.hddDisks.size.ru-central1-a",
+          "desired_limit": 118111600640,
+          "status": "REJECTED",
+          "message": "Пожалуйста, создайте новое обращение с запросом квоты в зоне доступности ru-central1-d"
+        },
+        {
+          "quota_id": "compute.instanceMemory.size.ru-central1-b",
+          "desired_limit": 6442450944,
+          "status": "REJECTED",
+          "message": "Пожалуйста, создайте новое обращение с запросом квоты в зоне доступности ru-central1-d"
+        },
+        {
+          "quota_id": "compute.hddDisks.size.ru-central1-b",
+          "desired_limit": 37580963840,
+          "status": "REJECTED",
+          "message": "Пожалуйста, создайте новое обращение с запросом квоты в зоне доступности ru-central1-d"
+        },
+        {
+          "quota_id": "compute.snapshots.size",
+          "desired_limit": 858993459200,
+          "status": "PROCESSING"
+        },
+        {
+          "quota_id": "compute.instanceCores.count.ru-central1-a",
+          "desired_limit": 8,
+          "status": "REJECTED",
+          "message": "Пожалуйста, создайте новое обращение с запросом квоты в зоне доступности ru-central1-d"
+        },
+        {
+          "quota_id": "vpc.securityGroups.count",
+          "desired_limit": 12,
+          "status": "PROCESSING"
+        },
+        {
+          "quota_id": "compute.snapshots.count",
+          "desired_limit": 65,
+          "status": "PROCESSING"
+        },
+        {
+          "quota_id": "vpc.networks.count",
+          "desired_limit": 3,
+          "status": "PROCESSING"
+        }
+      ],
+      "created_by": "ajecrvfdh06a5m67ndd4"
+    },
+    {
+      "id": "atd48otkae9bpu0q15uh",
+      "resource": {
+        "id": "b1gb7ghs6e3j9crn0t19",
+        "type": "resource-manager.cloud"
+      },
+      "created_at": "2026-10-10T19:18:43.086769Z",
+      "status": "CANCELED",
+      "quota_limits": [
+        {
+          "quota_id": "compute.instanceMemory.size.ru-central1-b",
+          "desired_limit": 1073741824,
+          "status": "CANCELED"
+        },
+        {
+          "quota_id": "compute.instanceCores.count.ru-central1-b",
+          "desired_limit": 1,
+          "status": "CANCELED"
+        }
+      ],
+      "created_by": "ajer838tg7fdignlaunq"
+    }
+  ],
+  "limits": {
+    "compute.dedicatedHosts.count": {
+      "quota_id": "compute.dedicatedHosts.count",
+      "limit": 0,
+      "usage": 0
+    },
+    "compute.diskPlacementGroups.count": {
+      "quota_id": "compute.diskPlacementGroups.count",
+      "limit": 5,
+      "usage": 0
+    },
+    "compute.diskPools.count": {
+      "quota_id": "compute.diskPools.count",
+      "limit": 0,
+      "usage": 0
+    },
+    "compute.disks.count": {
+      "quota_id": "compute.disks.count",
+      "limit": 32,
+      "usage": 6
+    },
+    "compute.filesystems.count": {
+      "quota_id": "compute.filesystems.count",
+      "limit": 100,
+      "usage": 0
+    },
+    "compute.hddDisks.size.ru-central1-a": {
+      "quota_id": "compute.hddDisks.size.ru-central1-a",
+      "limit": 37580963840,
+      "usage": 53687091200
+    },
+    "compute.hddDisks.size.ru-central1-d": {
+      "quota_id": "compute.hddDisks.size.ru-central1-d",
+      "limit": 21474836480,
+      "usage": 0
+    },
+    "compute.hddDisks.size.ru-central1-e": {
+      "quota_id": "compute.hddDisks.size.ru-central1-e",
+      "limit": 21474836480,
+      "usage": 0
+    },
+    "compute.hddFilesystems.size.ru-central1-a": {
+      "quota_id": "compute.hddFilesystems.size.ru-central1-a",
+      "limit": 0,
+      "usage": 0
+    },
+    "compute.hddFilesystems.size.ru-central1-d": {
+      "quota_id": "compute.hddFilesystems.size.ru-central1-d",
+      "limit": 0,
+      "usage": 0
+    },
+    "compute.hddFilesystems.size.ru-central1-e": {
+      "quota_id": "compute.hddFilesystems.size.ru-central1-e",
+      "limit": 0,
+      "usage": 0
+    },
+    "compute.hostGroups.count": {
+      "quota_id": "compute.hostGroups.count",
+      "limit": 6,
+      "usage": 0
+    },
+    "compute.images.count": {
+      "quota_id": "compute.images.count",
+      "limit": 32,
+      "usage": 0
+    },
+    "compute.images.size": {
+      "quota_id": "compute.images.size",
+      "limit": 1099511627776,
+      "usage": 0
+    },
+    "compute.instanceA100Gpus.count": {
+      "quota_id": "compute.instanceA100Gpus.count",
+      "limit": 0,
+      "usage": 0
+    },
+    "compute.instanceCores.count.ru-central1-a": {
+      "quota_id": "compute.instanceCores.count.ru-central1-a",
+      "limit": 2,
+      "usage": 0
+    },
+    "compute.instanceCores.count.ru-central1-d": {
+      "quota_id": "compute.instanceCores.count.ru-central1-d",
+      "limit": 2,
+      "usage": 0
+    },
+    "compute.instanceCores.count.ru-central1-e": {
+      "quota_id": "compute.instanceCores.count.ru-central1-e",
+      "limit": 2,
+      "usage": 0
+    },
+    "compute.instanceGpus.count": {
+      "quota_id": "compute.instanceGpus.count",
+      "limit": 0,
+      "usage": 0
+    },
+    "compute.instanceGroups.count": {
+      "quota_id": "compute.instanceGroups.count",
+      "limit": 10,
+      "usage": 0
+    },
+    "compute.instanceHighFreqCores.count.ru-central1-a": {
+      "quota_id": "compute.instanceHighFreqCores.count.ru-central1-a",
+      "limit": 0,
+      "usage": 0
+    },
+    "compute.instanceHighFreqCores.count.ru-central1-d": {
+      "quota_id": "compute.instanceHighFreqCores.count.ru-central1-d",
+      "limit": 0,
+      "usage": 0
+    },
+    "compute.instanceHighFreqCores.count.ru-central1-e": {
+      "quota_id": "compute.instanceHighFreqCores.count.ru-central1-e",
+      "limit": 0,
+      "usage": 0
+    },
+    "compute.instanceMemory.size.ru-central1-a": {
+      "quota_id": "compute.instanceMemory.size.ru-central1-a",
+      "limit": 17179869184,
+      "usage": 0
+    },
+    "compute.instanceMemory.size.ru-central1-d": {
+      "quota_id": "compute.instanceMemory.size.ru-central1-d",
+      "limit": 17179869184,
+      "usage": 0
+    },
+    "compute.instanceMemory.size.ru-central1-e": {
+      "quota_id": "compute.instanceMemory.size.ru-central1-e",
+      "limit": 17179869184,
+      "usage": 0
+    },
+    "compute.instanceT4Gpus.count": {
+      "quota_id": "compute.instanceT4Gpus.count",
+      "limit": 0,
+      "usage": 0
+    },
+    "compute.instanceT4Gpus.count.ru-central1-d": {
+      "quota_id": "compute.instanceT4Gpus.count.ru-central1-d",
+      "limit": 0,
+      "usage": 0
+    },
+    "compute.instanceT4IGpus.count": {
+      "quota_id": "compute.instanceT4IGpus.count",
+      "limit": 0,
+      "usage": 0
+    },
+    "compute.instanceV3IGpus.count": {
+      "quota_id": "compute.instanceV3IGpus.count",
+      "limit": 0,
+      "usage": 0
+    },
+    "compute.instances.count": {
+      "quota_id": "compute.instances.count",
+      "limit": 12,
+      "usage": 6
+    },
+    "compute.placementGroups.count": {
+      "quota_id": "compute.placementGroups.count",
+      "limit": 2,
+      "usage": 0
+    },
+    "compute.reservedInstancePools.count": {
+      "quota_id": "compute.reservedInstancePools.count",
+      "limit": 1,
+      "usage": 0
+    },
+    "compute.snapshotSchedules.count": {
+      "quota_id": "compute.snapshotSchedules.count",
+      "limit": 32,
+      "usage": 1
+    },
+    "compute.snapshots.count": {
+      "quota_id": "compute.snapshots.count",
+      "limit": 32,
+      "usage": 32
+    },
+    "compute.snapshots.size": {
+      "quota_id": "compute.snapshots.size",
+      "limit": 429496729600,
+      "usage": 130153447424
+    },
+    "compute.ssdDisks.size.ru-central1-a": {
+      "quota_id": "compute.ssdDisks.size.ru-central1-a",
+      "limit": 10737418240,
+      "usage": 0
+    },
+    "compute.ssdDisks.size.ru-central1-d": {
+      "quota_id": "compute.ssdDisks.size.ru-central1-d",
+      "limit": 80530636800,
+      "usage": 0
+    },
+    "compute.ssdDisks.size.ru-central1-e": {
+      "quota_id": "compute.ssdDisks.size.ru-central1-e",
+      "limit": 10737418240,
+      "usage": 0
+    },
+    "compute.ssdFilesystems.size.ru-central1-a": {
+      "quota_id": "compute.ssdFilesystems.size.ru-central1-a",
+      "limit": 0,
+      "usage": 0
+    },
+    "compute.ssdFilesystems.size.ru-central1-d": {
+      "quota_id": "compute.ssdFilesystems.size.ru-central1-d",
+      "limit": 0,
+      "usage": 0
+    },
+    "compute.ssdFilesystems.size.ru-central1-e": {
+      "quota_id": "compute.ssdFilesystems.size.ru-central1-e",
+      "limit": 0,
+      "usage": 0
+    },
+    "compute.ssdIOM3Disks.size.ru-central1-a": {
+      "quota_id": "compute.ssdIOM3Disks.size.ru-central1-a",
+      "limit": 0,
+      "usage": 0
+    },
+    "compute.ssdIOM3Disks.size.ru-central1-d": {
+      "quota_id": "compute.ssdIOM3Disks.size.ru-central1-d",
+      "limit": 0,
+      "usage": 0
+    },
+    "compute.ssdIOM3Disks.size.ru-central1-e": {
+      "quota_id": "compute.ssdIOM3Disks.size.ru-central1-e",
+      "limit": 0,
+      "usage": 0
+    },
+    "compute.ssdNonReplicatedDisks.size.ru-central1-a": {
+      "quota_id": "compute.ssdNonReplicatedDisks.size.ru-central1-a",
+      "limit": 0,
+      "usage": 0
+    },
+    "compute.ssdNonReplicatedDisks.size.ru-central1-d": {
+      "quota_id": "compute.ssdNonReplicatedDisks.size.ru-central1-d",
+      "limit": 0,
+      "usage": 0
+    },
+    "compute.ssdNonReplicatedDisks.size.ru-central1-e": {
+      "quota_id": "compute.ssdNonReplicatedDisks.size.ru-central1-e",
+      "limit": 0,
+      "usage": 0
+    },
+    "vpc.externalAddresses.count": {
+      "quota_id": "vpc.externalAddresses.count",
+      "limit": 8,
+      "usage": 1
+    },
+    "vpc.externalStaticAddresses.count": {
+      "quota_id": "vpc.externalStaticAddresses.count",
+      "limit": 2,
+      "usage": 1
+    },
+    "vpc.gateways.count": {
+      "quota_id": "vpc.gateways.count",
+      "limit": 8,
+      "usage": 2
+    },
+    "vpc.networks.count": {
+      "quota_id": "vpc.networks.count",
+      "limit": 2,
+      "usage": 2
+    },
+    "vpc.privateEndpoints.count": {
+      "quota_id": "vpc.privateEndpoints.count",
+      "limit": 2,
+      "usage": 0
+    },
+    "vpc.routeTables.count": {
+      "quota_id": "vpc.routeTables.count",
+      "limit": 8,
+      "usage": 1
+    },
+    "vpc.securityGroups.count": {
+      "quota_id": "vpc.securityGroups.count",
+      "limit": 10,
+      "usage": 5
+    },
+    "vpc.sharedEgressGateways.count": {
+      "quota_id": "vpc.sharedEgressGateways.count",
+      "limit": 8,
+      "usage": 2
+    },
+    "vpc.staticRoutes.count": {
+      "quota_id": "vpc.staticRoutes.count",
+      "limit": 256,
+      "usage": 1
+    },
+    "vpc.subnets.count": {
+      "quota_id": "vpc.subnets.count",
+      "limit": 12,
+      "usage": 5
+    }
+  }
+}

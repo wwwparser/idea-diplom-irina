@@ -1,0 +1,9 @@
+{
+  "dump": "/var/backups/zabbix/zabbix-20261024T082931Z.dump",
+  "bytes": 4657205,
+  "restore_ok": true,
+  "managed_hosts_restored": 2,
+  "users_restored": 2,
+  "temporary_database_removed": true,
+  "checked_at": "2026-10-24T08:29:40.022989+00:00"
+}

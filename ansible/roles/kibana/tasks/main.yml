@@ -1,0 +1,21 @@
+---
+- name: Install matching Kibana
+  ansible.builtin.apt:
+    name: "kibana={{ elastic_version }}"
+    state: present
+
+- name: Configure Kibana using dedicated system user
+  ansible.builtin.template:
+    src: kibana.yml.j2
+    dest: /etc/kibana/kibana.yml
+    owner: root
+    group: kibana
+    mode: '0640'
+  no_log: true
+  notify: Restart Kibana
+
+- name: Enable Kibana
+  ansible.builtin.systemd_service:
+    name: kibana
+    enabled: true
+    state: started
